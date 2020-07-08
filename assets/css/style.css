@@ -421,7 +421,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 991px) {
   #hero {
     text-align: center;
-    padding-bottom: 60px;
+    padding-bottom: 0px;
   }
   #hero .download-btn + .download-btn {
     margin: 10px 10px;
@@ -431,10 +431,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (min-width: 2000px) {
+  #hero {
+    background-size: 100% 100%;
+  }
+}
+
 @media (max-width: 768px) {
   #hero {
     padding-top: 100px;
-    padding-bottom: 50px;
   }
   #hero h1 {
     font-size: 40px;
