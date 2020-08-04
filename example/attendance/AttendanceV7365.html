@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html>
+<head><title>
+	HomeAccess
+</title>
+    
+    <link href="/HomeAccess/Stylesheets/Themes/custom-theme/jquery?v=khU3GP_ixo8tMiLwXJEqkRywEE1c7SBpfpbj4KSDyXA1" rel="Stylesheet" type="text/css" /> 
+
+    
+    <link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=CrossSite" />
+    <link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=ComboBox" />
+    <link rel="Stylesheet" href="../../Stylesheets/Common/font-awesome.css" />
+    
+    
+    <link rel="Stylesheet" href="../../Stylesheets/Site.css" />
+    <link rel="stylesheet" href="../../Stylesheets/Frame/Frame.css" /> 
+    <link rel="SHORTCUT ICON" href="../../Media/Themes/Base/Common/favicon.ico"/>
+    <style>
+        .sg-asp-table-header-row,
+        .ui-jqgrid-view .ui-jqgrid-hdiv, 
+        .ui-jqgrid tr.ui-jqgrid-labels th  {
+	        background-color: #00427c;
+            color: #FFFFFF;
+        }
+    </style>
+
+    <script src="/HomeAccess/Scripts/libs/jquery?v=kFkgd6hNofX_b_JGNSXAqVYLW6XzxJEd8j1YdcwKx3I1" type="text/javascript"></script>   
+    <script src="../../Scripts/libs/modernizr-2.8.3.js" type="text/javascript"></script>   
+    <script src="../../Scripts/Trirand/ui.multiselect.js" type="text/javascript" ></script>
+    <script src="../../Scripts/Trirand/i18n/grid.locale-en.js" type="text/javascript"></script>
+    <script src="../../Scripts/Trirand/jquery.jqGrid.js" type="text/javascript"></script>
+    <script src="../../Scripts/libs/json2.js" type="text/javascript"></script>
+    <script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=SungardCommon" type="text/javascript"></script>    
+    <script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=Combobox" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            parseForComboBoxes();
+        });
+    </script>    
+    
+
+    <script type="text/javascript">
+        $(SunGard.Common.Init('/HomeAccess/'));
+    </script>
+    
+    
+    
+    
+    <style>        
+        .sg-asp-calendar { width: 100%; font-size: 2.5em; }
+        .sg-asp-calendar-header {
+            border: none;
+	        border-bottom: medium solid #006699;
+	        font-weight: 700;
+	        color: #006699;
+        }
+        .sg-asp-calendar-today { border: 1px solid #006699; }
+
+        .sg-legend { border: 1px solid #006699; }
+        .sg-legend td  { padding-left: 5px; padding-right: 5px; }
+        .sg-legend tr.TableHeader td { text-align: center; }
+
+        .sg-width-38em { width: 38em; }
+    </style>
+    <script type="text/javascript" src="MonthlyView.js"></script>
+    <script type="text/javascript" src="../Common/Validation.js"></script>
+
+</head>
+<body>
+    
+    <div id='MainContent' class='sg-main-content'>
+        <div class='sg-hac-content'>
+            <form method="post" action="./MonthlyView.aspx" id="fmMain">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="c77M3lfdqn669yemEYvF9hzemkUFlkP+ccYsJfSAQwl+foaoRfJYWnUNr8RoJp3KBcR8+WkXIKyLBxt2uC6vuJASrEQ1V2Qgt2wvF8sQwtA=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['fmMain'];
+if (!theForm) {
+    theForm = document.fmMain;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C0F72E2D" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="JF4ZFcBi1jxcpQaYzWfUotAHyi/UGGFg1JibI7IDXX15c2rmQUH8xbL6sbV1Q4oGqVKzo23b9Y0oVFy6EzFQ73PFHlsG+9IA4FzoLYb9Svn7nNc9MA34anqbqYrOJOrYISne7FTqVaXiDpjjUUEtiSG+sSKb5pEvSB4/U/jPef5hn3IMTYOjV+a4SMEv4NJEUAN5kq4fB3lKsr0KjnCQF9dNHo0GW8rNeP1QZ9Ent4nTt0U7ywBAto0mVFrFepDZDk/TDUdhZeZYhojqX8kGxaxthP0fisukSQf3ExvADW1z1tFDdYqmJPzBAQAB3bGUUa1AHBPqqzZjI8o6XzSApf+MM2vuFMTZE+TvwXD8g7JB+gPN/H08EeqfzY875nP1XP6RKcv/JZ3rqVIl/orsp/jrKkEjI0u/YUouzyQU8fI2i1sDhnndJ3QQ8XvC6IviEEkG/HhSkTBi+05TCI+4EQtHp/+vnjA+NkFlyg8MgeHUZGF79HEdhF3oMEUFxvdxYvuujWtjXQ1HvFcYKX8spQYUxCrSZjqd49wJToYaIZkHGIO9tAz4EB7QC5qmvRXwS15uvxnbUND2a1KWtd0QSmTmDPAoHna0rxLzbeDhVujvbre8cK1ANFcTofxOevWNVzqLCindJsr7LZ4ItnAvhJoI2oOkH/cLkouEbIYu34KBFqZf/5OY9CMJTfBN7lfZk4MzVDRcMUo11eLN5diz7a/UTklAev2v5UbhpQ3uuyC7suw/E70DCK4BH1qsQT/ZojegJVJQTg7AkcNtEmclgcYlMA2spx9BmjYdd2V1ItrC8Pv6+5FJjNnnoJM/ZzIa04r89d5QQc2oSt1LbBLM4cgB8VlxXGwHkDJUbDvlQteo1YVXCLe9pRG5s6fSN+hMhJUndJ8HD1zCoq0c/aGgVlEebkx197DLxOqW+ap4zE76lqmaRSiWs4j2Dz9hVwV9qcJe0AP9YKjtZfmEvCKAcZw6zpD83Cg80+Kc6q+1l0HfuLSbz850wGiKZHkvwQYnAQmMr9aTWUcizaR+79mkmkoUfcNa8zHg2fJqIPkXaxtHGEW/AO5nMEf+owkGIGytjFQ3WU2+94oSXFiW+ir64rmzzDEVFzyFjI6++u9OAkKPhx15HFAp46cXLUy83hr/MHhVw1daLnmjGqyR18HQPNz1OiN9BBMV94Z4wA98P1eRhz6SrMt7M7T9HeFPuD/W1HXBadz4t4qTL7el4k7iUEPzAr1gth3OLeHcd3sd8bAsRoifZ9UR9XziXA9rahKMwH41Y/7mpnuECwG1IO+ZX7e8WBLcnuhX8ST3FZdUFQBmQAwjEHN/D9fT8VxaPGor" />
+</div>
+                
+    
+
+	<div class="sg-header">
+       
+	</div>
+     
+    <div class="sg-content-grid">
+
+        
+
+        <div class="sg-content-alert-container sg-container-content">
+            
+        </div>
+        
+        <table id="plnMain_cldAttendance" class="sg-asp-calendar" cellspacing="0" cellpadding="2" title="Calendar" style="border-width:1px;border-style:None;border-collapse:collapse;">
+	<tr><td colspan="7" style="background-color:White;border-color:White;"><table class="sg-asp-calendar-header" cellspacing="0" style="width:100%;border-collapse:collapse;">
+		<tr><td valign="bottom" style="font-weight:bold;width:15%;"><a href="javascript:__doPostBack('ctl00$plnMain$cldAttendance','V7336')" style="color:Black" title="Go to the previous month"><span title=''>&lt;&lt;</span></a></td><td align="center" style="width:70%;">March 2020</td><td align="right" valign="bottom" style="font-weight:bold;width:15%;"><a href="javascript:__doPostBack('ctl00$plnMain$cldAttendance','V7396')" style="color:Black" title="Go to the next month"><span title=''>&gt;&gt;</span></a></td></tr>
+	</table></td></tr><tr><th align="center" abbr="Sunday" scope="col" style="font-weight:bold;">Sun</th><th align="center" abbr="Monday" scope="col" style="font-weight:bold;">Mon</th><th align="center" abbr="Tuesday" scope="col" style="font-weight:bold;">Tue</th><th align="center" abbr="Wednesday" scope="col" style="font-weight:bold;">Wed</th><th align="center" abbr="Thursday" scope="col" style="font-weight:bold;">Thu</th><th align="center" abbr="Friday" scope="col" style="font-weight:bold;">Fri</th><th align="center" abbr="Saturday" scope="col" style="font-weight:bold;">Sat</th></tr><tr><td align="center" style="color:#999999;background-color:White;width:14%;"></td><td align="center" style="color:#999999;background-color:White;width:14%;"></td><td align="center" style="color:#999999;background-color:White;width:14%;"></td><td align="center" style="color:#999999;background-color:White;width:14%;"></td><td align="center" style="color:#999999;background-color:White;width:14%;"></td><td align="center" style="color:#999999;background-color:White;width:14%;"></td><td align="center" style="color:#999999;background-color:White;width:14%;"></td></tr><tr><td align="center" style="width:14%;background-color:#CCCCCC;">1</td><td title="1Excused Absence Parent Note2Excused Absence Parent Note" align="center" style="background-color:#FFCC00;width:14%;cursor:help;">2</td><td align="center" style="width:14%;">3</td><td title="1Testing2Testing3Testing4School Related" align="center" style="width:14%;background-color:#FFCC99;cursor:help;">4</td><td title="1School Related2School Related3School Related4School Related" align="center" style="background-color:#00CC00;width:14%;cursor:help;">5</td><td title="1School Related2School Related3School Related4School Related" align="center" style="background-color:#00CC00;width:14%;cursor:help;">6</td><td align="center" style="width:14%;background-color:#CCCCCC;">7</td></tr><tr><td align="center" style="width:14%;background-color:#CCCCCC;">8</td><td align="center" style="width:14%;background-color:#CCCCCC;">9</td><td align="center" style="width:14%;background-color:#CCCCCC;">10</td><td align="center" style="width:14%;background-color:#CCCCCC;">11</td><td align="center" style="width:14%;background-color:#CCCCCC;">12</td><td align="center" style="width:14%;background-color:#CCCCCC;">13</td><td align="center" style="width:14%;background-color:#CCCCCC;">14</td></tr><tr><td align="center" style="width:14%;background-color:#CCCCCC;">15</td><td align="center" style="width:14%;">16</td><td align="center" style="width:14%;">17</td><td align="center" style="width:14%;">18</td><td align="center" style="width:14%;">19</td><td align="center" style="width:14%;">20</td><td align="center" style="width:14%;background-color:#CCCCCC;">21</td></tr><tr><td align="center" style="width:14%;background-color:#CCCCCC;">22</td><td align="center" style="width:14%;">23</td><td align="center" style="width:14%;">24</td><td align="center" style="width:14%;">25</td><td align="center" style="width:14%;">26</td><td align="center" style="width:14%;">27</td><td align="center" style="width:14%;background-color:#CCCCCC;">28</td></tr><tr><td align="center" style="width:14%;background-color:#CCCCCC;">29</td><td align="center" style="width:14%;">30</td><td align="center" style="width:14%;">31</td><td align="center" style="color:#999999;background-color:White;width:14%;"></td><td align="center" style="color:#999999;background-color:White;width:14%;"></td><td align="center" style="color:#999999;background-color:White;width:14%;"></td><td align="center" style="color:#999999;background-color:White;width:14%;"></td></tr>
+</table>
+        
+        <div class="sg-asp-calendar-header">
+            <label id="lblColorLegend">Color Legend</label>
+        </div>
+        <div class="sg-clearfix">
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ff0000;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Absent</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #cc66ff;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Academic Placement</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #00cc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>College Visit</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #00cc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Court Required Appearance</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #cc66ff;">&nbsp;&nbsp;&nbsp;</span>
+                <span>DAEP</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ff0000;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Do Not Use for Attendance</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ffcc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Excused Absence</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ffcc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Excused Absence - Nurse Sent Home</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ffcc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Excused Absence Doctor Note</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ffcc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Excused Absence Parent Note</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ffcc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Excused Court</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ffcc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Excused Homebound</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ffcc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Excused Religious</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ffcc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Excused Treatment Center</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ffcc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Excused UIL Student Spectator</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ffcc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Exempt</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #00cc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Field Trip</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #00cc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Home Bound</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #6666ff;">&nbsp;&nbsp;&nbsp;</span>
+                <span>In School Suspension</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #00cc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Interim Learning</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #cc66ff;">&nbsp;&nbsp;&nbsp;</span>
+                <span>JJAEP</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #996600;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Late After School Pick UP</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #00cc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Medical Appointment</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #00cc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Military Visit</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #0033ff;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Missed Bus</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #00cc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Nurse&#39;s Office</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #000000;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Out of School Suspension</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #00cc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Present</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #00cc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Principal&#39;s Office</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #cccccc;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Recovered Absence</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #00ffff;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Religious Holiday</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #00cc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>School Related</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #cc66ff;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Serenity</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #0000cc;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Tardy</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ffcc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Teladoc</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #00cc00;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Testing</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ff0000;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Unexcused Absence</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #ff0000;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Unresolved Absence</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #FFCC99;">&nbsp;&nbsp;&nbsp;</span>
+                <span>Multiple Attendance Codes</span>
+            </div>
+            
+            <div class="sg-left sg-width-38em">
+                <span style="background-color: #CCCCCC;">&nbsp;&nbsp;&nbsp;</span>
+                <span>School Closed</span>
+            </div>
+            
+        </div>
+    </div>
+
+    <input name="ctl00$plnMain$hdnValidMHACLicense" type="hidden" id="plnMain_hdnValidMHACLicense" value="Y" />
+    <input name="ctl00$plnMain$hdnPeriod" type="hidden" id="plnMain_hdnPeriod" />
+    <input name="ctl00$plnMain$hdnAttendance" type="hidden" id="plnMain_hdnAttendance" />
+    <input name="ctl00$plnMain$hdnDismissTime" type="hidden" id="plnMain_hdnDismissTime" />
+    <input name="ctl00$plnMain$hdnArriveTime" type="hidden" id="plnMain_hdnArriveTime" />
+    <input name="ctl00$plnMain$hdnColorLegend" type="hidden" id="plnMain_hdnColorLegend" />
+    <input name="ctl00$plnMain$hdnCalTooltip" type="hidden" id="plnMain_hdnCalTooltip" />
+    <input name="ctl00$plnMain$hdnCalPrvMthToolTip" type="hidden" id="plnMain_hdnCalPrvMthToolTip" />
+    <input name="ctl00$plnMain$hdnCalNxtMthToolTip" type="hidden" id="plnMain_hdnCalNxtMthToolTip" />
+    <input name="ctl00$plnMain$hdnMultipleAttendenceCodes" type="hidden" id="plnMain_hdnMultipleAttendenceCodes" value="Multiple Attendance Codes" />
+    <input name="ctl00$plnMain$hdnSchoolClosed" type="hidden" id="plnMain_hdnSchoolClosed" value="School Closed" />
+    <input name="ctl00$plnMain$hdnLegendNoCodes" type="hidden" id="plnMain_hdnLegendNoCodes" value="Attendance Codes could not be found." />
+    <input name="ctl00$plnMain$hdnHyperlinkText_exist" type="hidden" id="plnMain_hdnHyperlinkText_exist" value="(Alerts Are Limited. Click to View List of Selected Choices.)" /> 
+    <input name="ctl00$plnMain$hdnHyperlinkText_Noexist" type="hidden" id="plnMain_hdnHyperlinkText_Noexist" value="(Limit Alerts to Specific Types of Attendance)" /> 
+
+            </form>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            // Build the jQuery UI buttons
+            $('.sg-buttonset').buttonset();
+            $('.sg-button').button();
+            window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height()); // set the init size
+            // Increase length of smaller content windows to reduce cutoffs in dropdowns. 
+            var iframeHeight = window.parent.$('.sg-legacy-iframe').height(); 
+            if (iframeHeight < 450)
+            { window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height() + 200); }
+           
+        })
+    </script>
+</body>
+</html>

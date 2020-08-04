@@ -1,0 +1,965 @@
+
+
+<!DOCTYPE html>
+<html>
+<head><title>
+	HomeAccess
+</title>
+    
+    <link href="/HomeAccess/Stylesheets/Themes/custom-theme/jquery?v=khU3GP_ixo8tMiLwXJEqkRywEE1c7SBpfpbj4KSDyXA1" rel="Stylesheet" type="text/css" /> 
+
+    
+    <link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=CrossSite" />
+    <link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=ComboBox" />
+    <link rel="Stylesheet" href="../../Stylesheets/Common/font-awesome.css" />
+    
+    
+    <link rel="Stylesheet" href="../../Stylesheets/Site.css" />
+    <link rel="stylesheet" href="../../Stylesheets/Frame/Frame.css" /> 
+    <link rel="SHORTCUT ICON" href="../../Media/Themes/Base/Common/favicon.ico"/>
+    <style>
+        .sg-asp-table-header-row,
+        .ui-jqgrid-view .ui-jqgrid-hdiv, 
+        .ui-jqgrid tr.ui-jqgrid-labels th  {
+	        background-color: #00427c;
+            color: #FFFFFF;
+        }
+    </style>
+
+    <script src="/HomeAccess/Scripts/libs/jquery?v=kFkgd6hNofX_b_JGNSXAqVYLW6XzxJEd8j1YdcwKx3I1" type="text/javascript"></script>   
+    <script src="../../Scripts/libs/modernizr-2.8.3.js" type="text/javascript"></script>   
+    <script src="../../Scripts/Trirand/ui.multiselect.js" type="text/javascript" ></script>
+    <script src="../../Scripts/Trirand/i18n/grid.locale-en.js" type="text/javascript"></script>
+    <script src="../../Scripts/Trirand/jquery.jqGrid.js" type="text/javascript"></script>
+    <script src="../../Scripts/libs/json2.js" type="text/javascript"></script>
+    <script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=SungardCommon" type="text/javascript"></script>    
+    <script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=Combobox" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            parseForComboBoxes();
+        });
+    </script>    
+    
+
+    <script type="text/javascript">
+        $(SunGard.Common.Init('/HomeAccess/'));
+    </script>
+    
+    
+    
+    <script type="text/javascript" src="OpenClassPopUp.js"></script>
+    <script type="text/javascript" >
+        function PrintReportCard() {
+            
+            window.open("../../Grades/PrintReportCard/" + $("#plnMain_hdnSchoolYear").val() + "-" + $("#plnMain_hdnRCRun").val());
+            return false;
+        }
+    </script>
+    <script type="text/javascript" >
+        function PrintReportCardDetail() {
+            window.open("ReportCardDetailReport.aspx?rcrun=" +  $("#plnMain_hdnRCRun").val() + "&type=rc", null, "status=no,menubar=no,toolbar=no,top=50,left=50,width=600,height=450");
+                return false;
+        }
+    </script>
+    <script type="text/javascript" src="AssignmentsFromRCPopUp.js"></script>
+    <script type="text/javascript" src="../Common/Validation.js"></script>
+    <link href="../../StyleSheets/ReportCard/ReportCards.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    
+    <div id='MainContent' class='sg-main-content'>
+        <div class='sg-hac-content'>
+            <form method="post" action="./ReportCards.aspx" id="fmMain">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ub33rQ47r/+bes7/S6e41mrWVfHaO1rqcc0PevoDiyGYvV0RVW1EIDImET62oyK/yCWJwyAaRf4/FeU+b3NdQmpYesVgOP67J32YdzFKHWhc5oaexZ1zBtsGRkjzZfJMPG3lC1MkSc2dEj/sQ51ewVhtjHCwKeOspBzBMuXF/LQ1eR1LWbeXvtPqem3yH6x7SllvLceqfyhk9T4kowTKRazOCdupstFAOQvu+vjifRPmXuohZbHF0S9pkMFKvLRmM/Wf5yH+U3fB2tVKcEcdbPhVPDi1nS8Auiai3toWSk9p5gsBbj10cQKuEStlAW/80ER2Ogk6FDrnbNKJh0uI9VgprsCmBMIMHrn9qEOrnRmCCvFarlPSF7nV1cAsabFtkYuBfE39b0e4hU2s+mnyHxWQcJQ4mfLvhEobc1KzRuMFnqLgfODSorZYpQTxvLjHN7oQVt7LcQOaYlKiTzhGpG4Jm0DDsOzb2xjdsxFWS5Re6OK0RT10GgCwrnb3gBWEVOfLuRiWfzBrJsxEzYuOAw==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['fmMain'];
+if (!theForm) {
+    theForm = document.fmMain;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="DF83DEEA" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="9zr2yPlGx+glm2rVdcKIhqPtJIXBg/JBT4N373F/YMGjvJ3HwCqh6ez3qON+tzOTmSsL3gpsAfYwjhVZJ6l7lDjGuCSKrrAS53lNr0XKbW4aO9cDTWCmD3Djy3HEqBnEQ05Dd0b5ZZg6z2e+1T30d9Myso/mdnWMVxVWsnPGOzk0ZoINDKGZ9EWpEQl3+VmQ8T6/YM4p+8AsFK1IWsbCEebaBID3+ZKbZRSYV2+qz+Qci6ulcHOSd0F/+p2MJ4z6I4HdHThhV1dGR/SAZv8/XsXYUDIRhHRmf2aTAFh02QpOS1lrrjQmWQjSR51EOuN0" />
+</div>
+                
+
+	<div class="sg-header">
+        <input name="ctl00$plnMain$hdnTitle" type="hidden" id="plnMain_hdnTitle" value="Report Card" />
+        <input name="ctl00$plnMain$hdnTitle2" type="hidden" id="plnMain_hdnTitle2" value="Report Card For Reporting Period" />
+        <input name="ctl00$plnMain$hdnRCRun" type="hidden" id="plnMain_hdnRCRun" value="2" />
+        <input name="ctl00$plnMain$hdnSchoolYear" type="hidden" id="plnMain_hdnSchoolYear" value="2020" />
+        <label id="plnMain_lblTitle" class="sg-header-heading">Report Card For Reporting Period 2</label>
+        <button id="plnMain_btnPrint" class="sg-button sg-right" onclick="PrintReportCard(); return false;"><span id="plnMain_lblPrintLabel" class="sg-nobold">Print</span></button>
+
+    </div>
+         
+    <div class="sg-content-grid">
+        <div class="sg-content-grid-container sg-container-content"> 
+            <span id="plnMain_lblRCRuns">View the Report Card for Reporting Period&nbsp;</span>
+                    <select name="ctl00$plnMain$ddlRCRuns" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$plnMain$ddlRCRuns\&#39;,\&#39;\&#39;)&#39;, 0)" id="plnMain_ddlRCRuns" class="sg-combobox">
+	<option value="1-2020-13715">1</option>
+	<option selected="selected" value="2-2020-14064">2</option>
+	<option value="3-2020-14290">3</option>
+	<option value="4-2020-14465">4</option>
+
+</select>
+            
+            			
+				 
+			 
+        </div>
+
+        
+        <div class="sg-content-grid">
+	        <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_dgReportCard" style="border-style:None;border-collapse:collapse;">
+	<tr class="sg-asp-table-header-row">
+		<td>Course</td><td>Description</td><td>Period</td><td>Teacher</td><td>Room</td><td>Att.Credit</td><td>Ern.Credit</td><td>Q1</td><td>Q2</td><td>SEM1</td><td>COM1</td><td>COM2</td><td>CIT</td><td>ABS</td><td>YTDA</td><td>TARDY</td><td>YTDT</td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>CATE27600A - 1    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('3648707'); return false;">Mobile App Programming S1@CTEC</a>
+				        </td><td align="center">1            </td><td><a href="mailto:PageG@friscoisd.org">Page, Gerald</a></td><td>XC148</td><td>
+					        0.5000
+				        </td><td>
+					        0.5000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('3648707', '1', '2', 'Q1', 'QTR', 1); return false;">  100</a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('3648707', '1', '2', 'Q2', 'QTR', 2); return false;">  100</a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  100</a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>CATE27600B - 1    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('3648708'); return false;">Mobile App Programming S2@CTEC</a>
+				        </td><td align="center">1            </td><td><a href="mailto:PageG@friscoisd.org">Page, Gerald</a></td><td>XC148</td><td>
+					        0.5000
+				        </td><td>
+					        0.0000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('3648708', '1', '2', 'Q1', 'QTR', 1); return false;">  </a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('3648708', '1', '2', 'Q2', 'QTR', 2); return false;">  </a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>TEC22200A - 1    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('4047742'); return false;">Advanced Computer Scien - S1</a>
+				        </td><td align="center">1            </td><td><a href="mailto:bunnb@friscoisd.org">BUNN, BRYAN</a></td><td>C136 </td><td>
+					        0.5000
+				        </td><td>
+					        0.5000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4047742', '1', '2', 'Q1', 'QTR', 1); return false;">  100</a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4047742', '1', '2', 'Q2', 'QTR', 2); return false;">  97</a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  99</a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  2</a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  2</a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  0</a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  0</a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>TEC22200B - 1    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('4047743'); return false;">Advanced Computer Scien - S2</a>
+				        </td><td align="center">1            </td><td><a href="mailto:bunnb@friscoisd.org">BUNN, BRYAN</a></td><td>C136 </td><td>
+					        0.5000
+				        </td><td>
+					        0.0000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4047743', '1', '2', 'Q1', 'QTR', 1); return false;">  </a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4047743', '1', '2', 'Q2', 'QTR', 2); return false;">  </a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>ELA13300A - 5    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('4046251'); return false;">AP English Language - S1</a>
+				        </td><td align="center">2            </td><td><a href="mailto:gardnersw@friscoisd.org">Gardner, Swapna</a></td><td>C148 </td><td>
+					        0.5000
+				        </td><td>
+					        0.5000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046251', '1', '2', 'Q1', 'QTR', 1); return false;">  91</a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046251', '1', '2', 'Q2', 'QTR', 2); return false;">  97</a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  94</a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  3</a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  3</a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  0</a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  0</a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>ELA13300B - 5    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('4046252'); return false;">AP English Language - S2</a>
+				        </td><td align="center">2            </td><td><a href="mailto:gardnersw@friscoisd.org">Gardner, Swapna</a></td><td>C148 </td><td>
+					        0.5000
+				        </td><td>
+					        0.0000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046252', '1', '2', 'Q1', 'QTR', 1); return false;">  </a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046252', '1', '2', 'Q2', 'QTR', 2); return false;">  </a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>SCI34500A - 2    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('4047151'); return false;">AP Physics 2 - S1</a>
+				        </td><td align="center">2            </td><td><a href="mailto:MosleyH@friscoisd.org">Mosley, Holley</a></td><td>P3   </td><td>
+					        0.5000
+				        </td><td>
+					        0.5000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4047151', '1', '2', 'Q1', 'QTR', 1); return false;">  100</a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4047151', '1', '2', 'Q2', 'QTR', 2); return false;">  99</a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  100</a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  1</a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  1</a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  0</a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  0</a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>SCI34500B - 2    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('4047152'); return false;">AP Physics 2 - S2</a>
+				        </td><td align="center">2            </td><td><a href="mailto:MosleyH@friscoisd.org">Mosley, Holley</a></td><td>P3   </td><td>
+					        0.5000
+				        </td><td>
+					        0.0000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4047152', '1', '2', 'Q1', 'QTR', 1); return false;">  </a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4047152', '1', '2', 'Q2', 'QTR', 2); return false;">  </a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>FNA11150A - 1    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('4046553'); return false;">PAP Art I S1</a>
+				        </td><td align="center">3            </td><td><a href="mailto:MatulicJ@friscoisd.org">Matulich, Jeb</a></td><td>H105 </td><td>
+					        0.5000
+				        </td><td>
+					        0.5000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046553', '1', '2', 'Q1', 'QTR', 1); return false;">  97</a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046553', '1', '2', 'Q2', 'QTR', 2); return false;">  99</a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  98</a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  2</a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  4</a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  0</a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  0</a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>FNA11150B - 1    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('4046554'); return false;">PAP Art I - S2</a>
+				        </td><td align="center">3            </td><td><a href="mailto:MatulicJ@friscoisd.org">Matulich, Jeb</a></td><td>H105 </td><td>
+					        0.5000
+				        </td><td>
+					        0.0000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046554', '1', '2', 'Q1', 'QTR', 1); return false;">  </a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046554', '1', '2', 'Q2', 'QTR', 2); return false;">  </a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>SST23300A - 6    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('4047494'); return false;">AP US History- S1</a>
+				        </td><td align="center">3            </td><td><a href="mailto:hillwh@friscoisd.org">Hill, Whitney</a></td><td>C115 </td><td>
+					        0.5000
+				        </td><td>
+					        0.5000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4047494', '1', '2', 'Q1', 'QTR', 1); return false;">  98</a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4047494', '1', '2', 'Q2', 'QTR', 2); return false;">  99</a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  99</a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  1</a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  1</a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  0</a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  0</a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>SST23300B - 6    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('4047495'); return false;">AP US History- S2</a>
+				        </td><td align="center">3            </td><td><a href="mailto:hillwh@friscoisd.org">Hill, Whitney</a></td><td>C115 </td><td>
+					        0.5000
+				        </td><td>
+					        0.0000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4047495', '1', '2', 'Q1', 'QTR', 1); return false;">  </a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4047495', '1', '2', 'Q2', 'QTR', 2); return false;">  </a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>FLG23200A - 2    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('4046521'); return false;">PAP Spanish III - S1</a>
+				        </td><td align="center">4            </td><td><a href="mailto:TaquinoA@friscoisd.org">TAQUINO, ASHLI</a></td><td>C210 </td><td>
+					        0.5000
+				        </td><td>
+					        0.5000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046521', '1', '2', 'Q1', 'QTR', 1); return false;">  99</a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046521', '1', '2', 'Q2', 'QTR', 2); return false;">  98</a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  99</a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  2</a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  4</a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  0</a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  0</a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>FLG23200B - 2    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('4046522'); return false;">PAP Spanish III - S2</a>
+				        </td><td align="center">4            </td><td><a href="mailto:TaquinoA@friscoisd.org">TAQUINO, ASHLI</a></td><td>C210 </td><td>
+					        0.5000
+				        </td><td>
+					        0.0000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046522', '1', '2', 'Q1', 'QTR', 1); return false;">  </a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046522', '1', '2', 'Q2', 'QTR', 2); return false;">  </a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>MTH45300A - 5    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('4046972'); return false;">AP Calculus AB - S1</a>
+				        </td><td align="center">4            </td><td><a href="mailto:schallak@friscoisd.org">Schalla, Kathryn</a></td><td>C233 </td><td>
+					        0.5000
+				        </td><td>
+					        0.5000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046972', '1', '2', 'Q1', 'QTR', 1); return false;">  97</a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046972', '1', '2', 'Q2', 'QTR', 2); return false;">  98</a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  98</a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  1</a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  1</a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  0</a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  0</a>  
+                               
+                        </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>MTH45300B - 5    </td><td>
+					        <a href="#" onclick="OpenClassPopUp('4046973'); return false;">AP Calculus AB - S2</a>
+				        </td><td align="center">4            </td><td><a href="mailto:schallak@friscoisd.org">Schalla, Kathryn</a></td><td>C233 </td><td>
+					        0.5000
+				        </td><td>
+					        0.0000
+				        </td><td>
+					        
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046973', '1', '2', 'Q1', 'QTR', 1); return false;">  </a>                                   
+                           
+                        </td><td> 
+                            
+					        <a   href="#" onclick="OpenAssingmentsFromRC('4046973', '1', '2', 'Q2', 'QTR', 2); return false;">  </a>                                     
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                                                                  
+                        </td><td>
+                            
+					        <a   return false;">  </a>                                 
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td><td> 
+                            
+		    		        <a   return false;">  </a>  
+                               
+                        </td><td>
+                            
+					        <a   return false;">  </a>  
+                               
+                        </td>
+	</tr>
+</table>
+            <div class="sg-content-grid">
+			    <div id="plnMain_trTotalEarnedCredit" class="sg-gpa-and-credit-info">
+				    <label id="plnMain_lblTotalEarnedCreditM">Total Earned Credit:</label>
+				    <span id="plnMain_lblTotalEarnedCredit">4.0000</span>
+			    </div>
+			    
+	        </div>
+	        <div>
+		        
+                
+	        </div>
+        </div>
+        
+        <script>
+            $(function () {
+                if('True' == 'False')
+                    $('.tdCredit').hide();
+                if ('True' == 'False')
+                    $('.tdGPA').hide();
+            });
+        </script>
+		<div id="plnMain_lblGPAAndCredit" class="sg-asp-table-group">
+            
+		</div>
+		
+    				
+        
+        <div id="plnMain_lblComments" class="sg-asp-table-group">
+			<div class="sg-header-group">
+				<label id="plnMain_lblCommentLegend">Comment Legend</label>
+			</div>
+			
+			<span id="plnMain_lblNoComments">There are no comments entered for this student.</span>
+        </div>
+
+        
+
+        
+	
+    </div>
+
+    <input name="ctl00$plnMain$hdnddlRcRunsSelected" type="hidden" id="plnMain_hdnddlRcRunsSelected" value="2" />
+
+            </form>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            // Build the jQuery UI buttons
+            $('.sg-buttonset').buttonset();
+            $('.sg-button').button();
+            window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height()); // set the init size
+            // Increase length of smaller content windows to reduce cutoffs in dropdowns. 
+            var iframeHeight = window.parent.$('.sg-legacy-iframe').height(); 
+            if (iframeHeight < 450)
+            { window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height() + 200); }
+           
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,2611 @@
+
+
+<!DOCTYPE html>
+<html>
+<head><title>
+	HomeAccess
+</title>
+    
+    <link href="/HomeAccess/Stylesheets/Themes/custom-theme/jquery?v=khU3GP_ixo8tMiLwXJEqkRywEE1c7SBpfpbj4KSDyXA1" rel="Stylesheet" type="text/css" /> 
+
+    
+    <link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=CrossSite" />
+    <link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=ComboBox" />
+    <link rel="Stylesheet" href="../../Stylesheets/Common/font-awesome.css" />
+    
+    
+    <link rel="Stylesheet" href="../../Stylesheets/Site.css" />
+    <link rel="stylesheet" href="../../Stylesheets/Frame/Frame.css" /> 
+    <link rel="SHORTCUT ICON" href="../../Media/Themes/Base/Common/favicon.ico"/>
+    <style>
+        .sg-asp-table-header-row,
+        .ui-jqgrid-view .ui-jqgrid-hdiv, 
+        .ui-jqgrid tr.ui-jqgrid-labels th  {
+	        background-color: #00427c;
+            color: #FFFFFF;
+        }
+    </style>
+
+    <script src="/HomeAccess/Scripts/libs/jquery?v=kFkgd6hNofX_b_JGNSXAqVYLW6XzxJEd8j1YdcwKx3I1" type="text/javascript"></script>   
+    <script src="../../Scripts/libs/modernizr-2.8.3.js" type="text/javascript"></script>   
+    <script src="../../Scripts/Trirand/ui.multiselect.js" type="text/javascript" ></script>
+    <script src="../../Scripts/Trirand/i18n/grid.locale-en.js" type="text/javascript"></script>
+    <script src="../../Scripts/Trirand/jquery.jqGrid.js" type="text/javascript"></script>
+    <script src="../../Scripts/libs/json2.js" type="text/javascript"></script>
+    <script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=SungardCommon" type="text/javascript"></script>    
+    <script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=Combobox" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            parseForComboBoxes();
+        });
+    </script>    
+    
+
+    <script type="text/javascript">
+        $(SunGard.Common.Init('/HomeAccess/'));
+    </script>
+    
+    
+    
+    <link href="../../Stylesheets/Assignments/AssignmentsStyle.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="Assignments.js"></script>
+    <script type="text/javascript" src="OpenClassPopUp.js"></script>
+    <script type="text/javascript" src="../Common/functional.js"></script>
+    <script type="text/javascript" src="../Common/Validation.js"></script>
+    <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript">
+        $(function () {
+            $('.comment-tooltip').tooltip({ tooltipClass: "comment-tooltip-hover" });
+        });
+    </script>
+
+</head>
+<body>
+    
+    <div id='MainContent' class='sg-main-content'>
+        <div class='sg-hac-content'>
+            <form method="post" action="./Assignments.aspx" id="fmMain">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="NFk3bdE980HX/xSk4xc7Q7s8o6DsWJsvnBfTakY4dasAuje232I4SdP+3nlANVJBbxTxV6d+mAHgWfDcCbwvK6ZypN9muDuUtTWO6ia/vqwOLS6XxkO86tqpU3KrNpav3K0O9Eoi30Np1RKio3xMAe99xqic5t7aigcCwvYWVyMG/FgKh3c57dqWFOW03lGNvDJ7ttXqw63cL2tMLuUKuTvgnUWHeVVzlNVvQo7uVsVgQGtQJelwf8GYu4jHQKw5IRRRgN5EU6j3Ucypc+Y9mfb9WGqFf+CbtmcEoWQRWOonshNCX+tWKaK7zZdx7gQOeIWeS8LNgCkB+eeU7M3ysaB3v4HaZClaeO5LYmKviYX/mMFr0PXw6hYnrTP/T3jp/44YRKmVHghFuKSy6a+L0m7l4SEDbwSTyUM7V3i/nzMqBkGflUzyHP4jO0eIQ+J2lvn3qWq+z4j8vdb4nC4xprG4TBP8uTxE9hvG8gktDHRWXKVe4cE6fsa/Mpxns0RBRUZZKxaD6J1b/SW063XGbGnoyQnRAYZrawNPK4FBqIMaaUikeIvzzZgS4v2RlM3Ix1GRSxcYEthfk1HKp1f3dGx+sy6oG9eZIip2V8PYrOyJ/gbQH19V/XdCWilkVd0dFphRnfhBBM1Ud+VbqLFi7QPApE0WFzGDcwuIi3Kz1/ZH2tt7eLr6s4INfmnJHZlvVIQjUGA+AqVAF0fDVcApH4egVxpNrVZ8Of7uRUVYn0LQALzsqnXctBUWyV/x4+pOPYQlaZnDYhwLiEMZW7P71vVinRUauSUJjSH4tfKQlK6oVy3M2IjfoA9QgcIM3ewx1poZ2RR+TtcRubj79i6n+vjcPQn7hxVKbhSfU/xAZuTfclP2aJRwX0Gi42+lxy2GSzmYzA+6fexML1iRWZtd1vZwXKsJa/oVekAYFtLBp+cs50PqO9gwPvwu9A/aP6YUdqx5FvGSbriXSoVW38KN55yH+tt2TLXJbLbZgozVkpHlzvCMR3wtgYsbMZaru4B9cb7ALfWt8j2lng5FZGy4QILDqTCFrRj/VueJHa441Zjjdg2Zl8g/TLFHAE/xma+4nZ8Eq1jfeU7akt40Uwm5zLWAfP9Lb6wgMk32sqqh1Rua3viBaWhBs6I8X61ejhrOOClsnKSzH5d+0YV4C5MrHagUWwObJr7n61e942uIEtloWyniM28CypR0QSefvQZeimM4n5JVfbo582fvm/9J02Wl3MqjoJsOw9RXu3dSZh7X6+Zee8g0n38CEGk3hvfIMZrrlTW5J3w1TAYFp1y8XbYuU8WvXimdVMK6NANoayHd2O0xtiP4Y2D7BFXnvFRQ0eldHmvii8FZvJRriTy4tI1cBYSBBTxHlqAtbYAlUB7V3QfbmD3JUbUM2bdUiReXilokxIkL1NCbxthIuBLeuryWjwstIISNLsZRjP+OJv56B1S3dBaftFcwIEBWMDt72dVxvmvLxCjdHnLIc/SzXfoaJSeGYIC/HjXCi4jHhhZACoOj463uKks+HPbwwxn56ZT0qJLhwVJDoNZyqBjTKU3IipRYYPUL/5GvwHkNpi4Xpe9/ajbMEB0IuybTbFPqC6LyzQfPoPfiAZnTeF+Q1T5Ih/M2kVvmdfn/wvlAewkwuqNyk79asLoTYVABAuVIL+9Z3a97vxc1I0TrLzM2A/3+vzmT79T2OXzhvCmdMDbP7HsxJRwKR+vRsI/DWPHsm5DsIR6kc1zmAdVVwFeO3YT752bS46ijrg5Nf7ZiA2q2sUIkaGgnH+ZWSQaDWfRS" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['fmMain'];
+if (!theForm) {
+    theForm = document.fmMain;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B0093F3C" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="4j7yplQqGO/px8Oox5e9xfgnTEYBWYGZZXD//J8IcSTWlsA2X5eb/fdTmpcUKd7bmEs4dYz1CHyxT+5pquqQ2tn0xuo8H8syEnkljaHbvZyPDzUhjvTnvkMVe6kGLXSLvljEIvffeH0jUOitnTNhZNBXaXs7nd1l3D9QNM0hGZm9pgRb9Q4j4KuDKe8OOuUU6e+yfIejNpoidplJORslBOvggohSaE2o2aZE7on/OlljfHHjPtUHbA5RPNT+rzmdIjw1xP3PJXsNrg12fJm/DyLIAGeJQdFKMWnHmf9I0BdvY9llvp8qClnfQvbwniRqcMm2zUJss6h7lpPUZBLV3WKohVb1oQyDtGTDsyebDiTfLGjAvNTwkAQYJTLEE3k0BVF+LpCDWtGg1DdZL2+iSZsX/76RIDUNtXMtwriEiJ4zQJebPHzIOPiN+nQ28t4J2qgi1QT0Isr9/LjdsZtfHqojBw7g7nXyqNL4jE71rBL9u3iXmGCpFZqsvELNinuYgjMvc52Hvyy0W/+L7XaXNwkUZl5ZqkhD/phfvRdj5lDs+0MYypgsq/8hokyIAiYWqdrI4g9PeUmqZO4GkDch9GEJDspp5g2BsTNDK8n4LXmmecjj1WIPUAEKs+NY13t8yxjuAKPH3oxOFl/eDGY90MAKfo9XHJh8FnltaNReof72aRLHoDtTHkToNc+hfvnnRb7BKLGP/SFoQWvSRqwfeH8sL3UssymX1zVpt9eAVOlJlinhSuJ7nNQ1NPRxN2RDZGSUjXdL6OpKFfno0g3HeVFZFl66qhf3oi17Aob2Aehs/aAUNFzoJmlyDq2oeSxsnB0zSEO7XwPguCADSHu0Ery6XIDfyEnd23oVqz3CYBAcx5/5Jzv+dp5vDaYNq0Jk32soxO6EfxtfU+YYX77AbxaIUc/alAmx4u53KJ7TjNb4Ewm/NQYDKUiPfYNe25gAmbvKe7e8L8QNFKYcQgqUrvHx0HYTSNVV8nOQYIs+QhizcZBQgU/YeeoqzjP46gfzRG3544Skc96ZJ98hhhtEflz5uSMuUzS53pgRPrE+2ZXAhsXD52KB7z5Id3UKao72iD4ugfOFmpBs3ZOZGogj0HSYPVIHQWfpW14t6Fnx1RoDLrH+3DLRt4VnDC+1nKBMUzLfJke/BXzYkoYQeQixhchkrn//zniBR46RswftpndZrlndtNKXKDIns+nxJO6WXGm+b8CW+JWU+tyTzkJQ3TqAzTLSPQVa7UUsdXGmLo2Jx4gZdhW03DS373xEosaaYlFcaj4parlupsbubQlgkq5Zr5ijniQXoQhI96MgX05pWRPbnedS3Q1MoopkzUTJqRnsnBZA0fC9Hm/cpRFJQnSW0GMhiSQloktA5sL1N9QMDeu7xvzfzd/IU3RyjjI+zfFpJFhedcxnsrr1vkqkM02pQRON3PVuVNgvaI+YrCaYiDMVvofKUsBEzvQosQU9L/gbv8PZ7izsY0J9HFmS+JnDrRmvbXiB/cXfpSaaDs08VqBhX8mCqQsouUlyXX/TecpgsJ2kIbdc9cYgQ5w1dzwS1yV2bXDYuwf6xj3xGXC5c+c5c0/yTgvnz9JaaLfMRmMVUArMvkG4APEXvb8fCb1bTl1ahmGhd8a9JpaqwBg=" />
+</div>
+                
+<div class="sg-header">
+		<input name="ctl00$plnMain$hdnValidMHACLicense" type="hidden" id="plnMain_hdnValidMHACLicense" value="Y" />
+        <input name="ctl00$plnMain$hdnIsVisibleClsWrk" type="hidden" id="plnMain_hdnIsVisibleClsWrk" value="N" />
+        <input name="ctl00$plnMain$hdnIsVisibleCrsAvg" type="hidden" id="plnMain_hdnIsVisibleCrsAvg" value="N" />
+        <input name="ctl00$plnMain$hdnJsAlert" type="hidden" id="plnMain_hdnJsAlert" value="Averages cannot be displayed when  Report Card Run is set to (All Runs)." />
+        <input name="ctl00$plnMain$hdnTitle" type="hidden" id="plnMain_hdnTitle" value="Classwork" />
+        <input name="ctl00$plnMain$hdnLastUpdated" type="hidden" id="plnMain_hdnLastUpdated" value="Last Updated" />
+        <input name="ctl00$plnMain$hdnDroppedCourse" type="hidden" id="plnMain_hdnDroppedCourse" value=" This course was dropped as of " />
+        <input name="ctl00$plnMain$hdnddlClasses" type="hidden" id="plnMain_hdnddlClasses" value="(All Classes)" /> 
+        <input name="ctl00$plnMain$hdnddlCompetencies" type="hidden" id="plnMain_hdnddlCompetencies" value="(All Classes)" /> 
+        <input name="ctl00$plnMain$hdnCompDateDue" type="hidden" id="plnMain_hdnCompDateDue" value="Date Due" /> 
+        <input name="ctl00$plnMain$hdnCompDateAssigned" type="hidden" id="plnMain_hdnCompDateAssigned" value="Date Assigned" /> 
+        <input name="ctl00$plnMain$hdnCompCourse" type="hidden" id="plnMain_hdnCompCourse" value="Course" /> 
+        <input name="ctl00$plnMain$hdnCompAssignment" type="hidden" id="plnMain_hdnCompAssignment" value="Assignment" /> 
+        <input name="ctl00$plnMain$hdnCompAssignmentLabel" type="hidden" id="plnMain_hdnCompAssignmentLabel" value="Assignments Not Related to Any Competency" /> 
+        <input name="ctl00$plnMain$hdnCompNoAssignments" type="hidden" id="plnMain_hdnCompNoAssignments" value="No assignments found" /> 
+        <input name="ctl00$plnMain$hdnCompNoClasswork" type="hidden" id="plnMain_hdnCompNoClasswork" value="Classwork could not be found for this competency for the selected report card run." /> 
+        <input name="ctl00$plnMain$hdnCompScore" type="hidden" id="plnMain_hdnCompScore" value="Score" /> 
+        <input name="ctl00$plnMain$hdnCompPoints" type="hidden" id="plnMain_hdnCompPoints" value="Points" /> 
+        <input name="ctl00$plnMain$hdnddlReportCardRuns1" type="hidden" id="plnMain_hdnddlReportCardRuns1" value="(All Runs)" /> 
+        <input name="ctl00$plnMain$hdnddlReportCardRuns2" type="hidden" id="plnMain_hdnddlReportCardRuns2" value="(All Terms)" /> 
+        <input name="ctl00$plnMain$hdnbtnShowAverage" type="hidden" id="plnMain_hdnbtnShowAverage" value="Show All Averages" />
+        <input name="ctl00$plnMain$hdnShowAveragesToolTip" type="hidden" id="plnMain_hdnShowAveragesToolTip" value="Show all student&#39;s averages" />
+        <input name="ctl00$plnMain$hdnPrintClassworkToolTip" type="hidden" id="plnMain_hdnPrintClassworkToolTip" value="Print all classwork" />
+        <input name="ctl00$plnMain$hdnPrintClasswork" type="hidden" id="plnMain_hdnPrintClasswork" value="Print Classwork" />
+        <input name="ctl00$plnMain$hdnCollapseToolTip" type="hidden" id="plnMain_hdnCollapseToolTip" value="Collapse all courses" />
+        <input name="ctl00$plnMain$hdnCollapse" type="hidden" id="plnMain_hdnCollapse" value="Collapse All" />
+        <input name="ctl00$plnMain$hdnFullToolTip" type="hidden" id="plnMain_hdnFullToolTip" value="Switch courses to Full View" />
+        <input name="ctl00$plnMain$hdnViewFull" type="hidden" id="plnMain_hdnViewFull" value="Full View" />
+        <input name="ctl00$plnMain$hdnQuickToolTip" type="hidden" id="plnMain_hdnQuickToolTip" value="Switch courses to Quick View" />
+        <input name="ctl00$plnMain$hdnViewQuick" type="hidden" id="plnMain_hdnViewQuick" value="Quick View" />
+        <input name="ctl00$plnMain$hdnExpand" type="hidden" id="plnMain_hdnExpand" value="Expand All" />
+        <input name="ctl00$plnMain$hdnExpandToolTip" type="hidden" id="plnMain_hdnExpandToolTip" value="Expand all courses" />
+        <input name="ctl00$plnMain$hdnChildCompetencyMessage" type="hidden" id="plnMain_hdnChildCompetencyMessage" value="This competency is calculated as an average of the following competencies" />
+        <input name="ctl00$plnMain$hdnCompetencyScoreLabel" type="hidden" id="plnMain_hdnCompetencyScoreLabel" value="Grade" />
+        <input name="ctl00$plnMain$hdnAverageDetailsDialogTitle" type="hidden" id="plnMain_hdnAverageDetailsDialogTitle" value="Average Details" />
+        <input name="ctl00$plnMain$hdnAssignmentCompetency" type="hidden" id="plnMain_hdnAssignmentCompetency" value="Assignment Competency" />
+        <input name="ctl00$plnMain$hdnAssignmentCourse" type="hidden" id="plnMain_hdnAssignmentCourse" value="Assignment Course" />
+        <input name="ctl00$plnMain$hdnTooltipTitle" type="hidden" id="plnMain_hdnTooltipTitle" value="Title" />
+        <input name="ctl00$plnMain$hdnCategory" type="hidden" id="plnMain_hdnCategory" value="Category" />
+        <input name="ctl00$plnMain$hdnDueDate" type="hidden" id="plnMain_hdnDueDate" value="Due Date" />
+        <input name="ctl00$plnMain$hdnMaxPoints" type="hidden" id="plnMain_hdnMaxPoints" value="Max Points" />
+        <input name="ctl00$plnMain$hdnCanBeDropped" type="hidden" id="plnMain_hdnCanBeDropped" value="Can Be Dropped" />
+        <input name="ctl00$plnMain$hdnHasAttachments" type="hidden" id="plnMain_hdnHasAttachments" value="Has Attachments" />
+        <input name="ctl00$plnMain$hdnExtraCredit" type="hidden" id="plnMain_hdnExtraCredit" value="Extra Credit" />
+        <input name="ctl00$plnMain$hdnType" type="hidden" id="plnMain_hdnType" value="Type" />
+        <input name="ctl00$plnMain$hdnAssignmentDataInfo" type="hidden" id="plnMain_hdnAssignmentDataInfo" value="Information could not be found for the assignment" />
+
+        <span id="plnMain_spnView"><button id="btnView" onclick="btnView_onclick(); return false;" class="sg-button sg-right sg-5px-margin btnView" title="Switch courses to Full View">Full View</button></span>        
+        <button id="plnMain_btnCollapseExpand" type="button" class="sg-button sg-right sg-5px-margin btnCollapseExpand" title="Collapse all courses" onClick="javascript:return btnCollapseExpand_onclick(event);">Collapse All</button>
+        <button id="plnMain_btnPrintClasswork" onclick="btnPrintClasswork_onclick()" type="button" class="sg-button sg-right sg-5px-margin btnPrintClassworkAction">Print Classwork</button>
+    </div>
+    <div id="plnMain_pnlFullPage" class="sg-content-grid">
+	
+        <div class="sg-content-grid-container sg-container-content">
+            <div>
+                <span id="plnMain_lblViewClassworkfor" style="font-weight:bold;">View Classwork for</span>
+                
+                
+            <span id="plnMain_lblForRCardRun" style="font-weight:bold;">Report Card Run</span>
+            
+                <select name="ctl00$plnMain$ddlReportCardRuns" id="plnMain_ddlReportCardRuns" class="sg-combobox">
+		<option value="ALL">(All Runs)</option>
+		<option selected="selected" value="1-2020">1</option>
+		<option value="2-2020">2</option>
+		<option value="3-2020">3</option>
+		<option value="4-2020">4</option>
+
+	</select>
+             
+                <button onclick="__doPostBack('ctl00$plnMain$btnRefreshView','')" id="plnMain_btnRefreshView" type="button" class="sg-button sg-right">Refresh View</button>
+            </div>
+            <div>
+                <label id="plnMain_lblShow">Show</label>
+                <span id="plnMain_spnCourse" class="asmt-course" style="display:;"><select name="ctl00$plnMain$ddlClasses" id="plnMain_ddlClasses" class="sg-combobox">
+		<option selected="selected" value="ALL">(All Classes)</option>
+		<option value="3648707|1">CATE27600A - 1    Mobile App Programming</option>
+		<option value="3648708|1">CATE27600B - 1    Mobile App Programming S2@CTEC</option>
+		<option value="4046251|1">ELA13300A - 5    English Composition</option>
+		<option value="4046252|1">ELA13300B - 5    AP English Language - S2</option>
+		<option value="4046521|1">FLG23200A - 2    Spanish Language</option>
+		<option value="4046522|1">FLG23200B - 2    PAP Spanish III - S2</option>
+		<option value="4046553|1">FNA11150A - 1    Professional Communications</option>
+		<option value="4046554|1">FNA11150B - 1    PAP Art I - S2</option>
+		<option value="4046972|1">MTH45300A - 5    Calculus AB</option>
+		<option value="4046973|1">MTH45300B - 5    AP Calculus AB - S2</option>
+		<option value="4047151|1">SCI34500A - 2    3D Modeling</option>
+		<option value="4047152|1">SCI34500B - 2    AP Physics 2 - S2</option>
+		<option value="4047494|1">SST23300A - 6    United States History</option>
+		<option value="4047495|1">SST23300B - 6    AP US History- S2</option>
+		<option value="4047742|1">TEC22200A - 1    Advanced Computer Science</option>
+		<option value="4047743|1">TEC22200B - 1    Advanced Computer Scien - S2</option>
+
+	</select></span>
+                <span id="plnMain_spnCompetency" class="asmt-competency" style="display:none;"><select name="ctl00$plnMain$ddlCompetencies" id="plnMain_ddlCompetencies" class="sg-combobox">
+		<option selected="selected" value="ALL">(All Classes)</option>
+
+	</select></span>
+                <label id="plnMain_lblOrderBy">Order by</label>
+                <span class="asmt-order"><select name="ctl00$plnMain$ddlOrderBy" id="plnMain_ddlOrderBy" class="sg-combobox">
+		<option selected="selected" value="Class">Class</option>
+		<option value="Date">Date Due</option>
+
+	</select></span>
+                   
+            </div>
+               
+        </div>
+        <div id="dvAlerts" class="sg-content-alert-container sg-container-content">
+            
+            
+        </div>
+    <div id="plnMain_vsAvgValidate" style="display:none;">
+
+	</div>
+    
+    
+    
+        <div class="AssignmentClass">
+            <div class="sg-header sg-header-square">
+                <button id="plnMain_rptAssigmnetsByCourse_btnShowHide_0" type="button" class="sg-button sg-button-show-hide sg-left sg-5px-margin icon-minus" onClick="javascript:return btnShowHide_onclick(event);"></button> 
+                 
+                    <a class="sg-header-heading" href="#" onclick="OpenClassPopUpWithMarkingPeriod('3648707',1); return false;">
+                        CATE27600A - 1    Mobile App Programming
+                    </a>    
+                <span id="plnMain_rptAssigmnetsByCourse_lblLastUpdDate_0" class="sg-header-sub-heading">(Last Updated: 1/7/2020)</span>
+                
+                <span id="plnMain_rptAssigmnetsByCourse_lblHdrAverage_0" class="sg-header-heading sg-right" title="">Student Grades 100.00%</span>    
+            </div>
+            <div class="sg-content-grid">
+                <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseAssignments_0" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td>Date Due</td><td>Date Assigned</td><td>Assignment</td><td>Category</td><td>Score</td><td>Total Points</td><td class="sg-view-quick">Weight</td><td class="sg-view-quick">Weighted Score</td><td class="sg-view-quick">Weighted Total Points</td><td class="sg-view-quick">Percentage</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/15/2019</td><td>10/09/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: PLAY: 2.3 Structures
+Category: Minor Grades
+Due Date: 10/15/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('3648707', '1', '12'); return false;">
+                                    PLAY: 2.3 Structures
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/07/2019</td><td>09/19/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: PROJECT: Pig
+Category: Major Grades
+Due Date: 10/07/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('3648707', '1', '13'); return false;">
+                                    PROJECT: Pig
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/17/2019</td><td>09/13/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: LAB: 2.8 Images - Hobby Tutorial App
+Category: Minor Grades
+Due Date: 09/17/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('3648707', '1', '11'); return false;">
+                                    LAB: 2.8 Images - Hobby Tutorial App
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/17/2019</td><td>09/13/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: LAB: 2.8 Images - Hello App
+Category: Minor Grades
+Due Date: 09/17/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('3648707', '1', '10'); return false;">
+                                    LAB: 2.8 Images - Hello App
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/13/2019</td><td>09/11/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: PLAY: 2.2 Functions
+Category: Minor Grades
+Due Date: 09/13/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('3648707', '1', '9'); return false;">
+                                    PLAY: 2.2 Functions
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/11/2019</td><td>09/09/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: PLAY: 2.1 Strings
+Category: Minor Grades
+Due Date: 09/11/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('3648707', '1', '8'); return false;">
+                                    PLAY: 2.1 Strings
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/09/2019</td><td>09/03/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: PROJECT: Light
+Category: Major Grades
+Due Date: 09/09/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('3648707', '1', '6'); return false;">
+                                    PROJECT: Light
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/03/2019</td><td>08/29/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: LAB: 1.8 Interface Builder
+Category: Minor Grades
+Due Date: 09/03/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('3648707', '1', '5'); return false;">
+                                    LAB: 1.8 Interface Builder
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/29/2019</td><td>08/27/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: LAB: 1.7 Docs
+Category: Minor Grades
+Due Date: 08/29/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('3648707', '1', '7'); return false;">
+                                    LAB: 1.7 Docs
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">0.50</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">50.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/29/2019</td><td>08/27/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: LAB: 1.6 Debugging
+Category: Minor Grades
+Due Date: 08/29/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('3648707', '1', '4'); return false;">
+                                    LAB: 1.6 Debugging
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">0.50</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">50.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/27/2019</td><td>08/23/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: PLAY: 1.4 If&#39;s &amp; Switch
+Category: Minor Grades
+Due Date: 08/27/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('3648707', '1', '3'); return false;">
+                                    PLAY: 1.4 If&#39;s &amp; Switch
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/23/2019</td><td>08/21/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: PLAY: 1.3 Operators
+Category: Minor Grades
+Due Date: 08/23/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('3648707', '1', '2'); return false;">
+                                    PLAY: 1.3 Operators
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/21/2019</td><td>08/19/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: PLAY: 1.2 Constants &amp; Variables
+Category: Minor Grades
+Due Date: 08/21/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('3648707', '1', '1'); return false;">
+                                    PLAY: 1.2 Constants &amp; Variables
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr>
+	</table>
+                <div class="sg-asp-table-group">
+                    <span id="plnMain_rptAssigmnetsByCourse_lblCategories_0" class="LabelCatogery">
+                        <div class="sg-view-quick sg-clearfix" >
+                            <div class="sg-header-group">
+                                <label id="plnMain_rptAssigmnetsByCourse_hdrCategories_0" CssClass="sg-header-heading">Categories</label>
+                            </div>
+                            <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseCategories_0" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td align="center" valign="middle">Category</td><td align="center" valign="middle">Student's<br>Points</td><td align="center" valign="middle"> / Maximum<br>Points</td><td align="center" valign="middle"> = Percent</td><td align="center" valign="middle"> * Category<br>Weight</td><td align="center" valign="middle"> = Category<br>Points</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Major Grades</td><td>200.0000</td><td>200.00</td><td>100.000%</td><td>60.00</td><td>60.00000</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Minor Grades</td><td>1000.0000</td><td>1000.00</td><td>100.000%</td><td>40.00</td><td>40.00000</td>
+		</tr><tr style="color:White;background-color:#CCCCCC;border-color:#CCCCCC;">
+			<td><b>Total Points:</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><b>100.00</b></td><td style="background-color:#CCCCCC;"><b>100.00000</b></td>
+		</tr>
+	</table>
+                            <br />
+                            
+                                <div style="display:inline-block;">
+                                <table id="plnMain_rptAssigmnetsByCourse_tblAverage_0" style="font-weight:bold;">
+		<tr>
+			<td><span id="plnMain_rptAssigmnetsByCourse_lblStudentOvAverage_0">Course overall average is:</span></td><td><span id="plnMain_rptAssigmnetsByCourse_lblStuPoints_0">100.00000</span></td><td>/</td><td><span id="plnMain_rptAssigmnetsByCourse_lblMaxPoints_0">100.00</span></td><td>=</td><td style="text-align: right"><span id="plnMain_rptAssigmnetsByCourse_lblOverallAverage_0">100.00</span></td><td>%</td>
+		</tr>
+	</table>
+                            </div>
+                            <span id="plnMain_rptAssigmnetsByCourse_lblShowAverages_0" class="sg-right">
+                                <button class="LabelCatogery sg-button"  id="btnShowAverages" onclick="btnShowAverages_onclick('3648707', '1'); return false;" title="Show all student's averages"  >Show All Averages</button>	
+                            </span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="AssignmentClass">
+            <div class="sg-header sg-header-square">
+                <button id="plnMain_rptAssigmnetsByCourse_btnShowHide_1" type="button" class="sg-button sg-button-show-hide sg-left sg-5px-margin icon-minus" onClick="javascript:return btnShowHide_onclick(event);"></button> 
+                 
+                    <a class="sg-header-heading" href="#" onclick="OpenClassPopUpWithMarkingPeriod('4046251',1); return false;">
+                        ELA13300A - 5    English Composition
+                    </a>    
+                <span id="plnMain_rptAssigmnetsByCourse_lblLastUpdDate_1" class="sg-header-sub-heading">(Last Updated: 1/6/2020)</span>
+                
+                <span id="plnMain_rptAssigmnetsByCourse_lblHdrAverage_1" class="sg-header-heading sg-right" title="">Student Grades 90.76%</span>    
+            </div>
+            <div class="sg-content-grid">
+                <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseAssignments_1" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td>Date Due</td><td>Date Assigned</td><td>Assignment</td><td>Category</td><td>Score</td><td>Total Points</td><td class="sg-view-quick">Weight</td><td class="sg-view-quick">Weighted Score</td><td class="sg-view-quick">Weighted Total Points</td><td class="sg-view-quick">Percentage</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/17/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Banneker RA - Commentary
+Category: Major Grades
+Due Date: 10/17/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046251', '1', '8'); return false;">
+                                    Banneker RA - Commentary
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                87.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">87.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">87.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/17/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Banneker RA - Evidence
+Category: Minor Grades
+Due Date: 10/17/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046251', '1', '7'); return false;">
+                                    Banneker RA - Evidence
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                92.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">92.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">92.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/11/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Sanders RA - Commentary
+Category: Minor Grades
+Due Date: 10/11/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046251', '1', '6'); return false;">
+                                    Sanders RA - Commentary
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                92.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">92.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">92.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/11/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Sanders RA - Evidence
+Category: Major Grades
+Due Date: 10/11/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046251', '1', '5'); return false;">
+                                    Sanders RA - Evidence
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                92.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">92.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">92.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/02/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Pathos - Rhetorical Analysis
+Category: Minor Grades
+Due Date: 10/02/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046251', '1', '4'); return false;">
+                                    Pathos - Rhetorical Analysis
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                96.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">96.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">96.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/19/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Ethos - Rhetorical Strategies
+Category: Minor Grades
+Due Date: 09/19/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046251', '1', '3'); return false;">
+                                    Ethos - Rhetorical Strategies
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                87.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">87.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">87.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/09/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Logos - Rhetorical Analysis Paragraph
+Category: Minor Grades
+Due Date: 09/09/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046251', '1', '2'); return false;">
+                                    Logos - Rhetorical Analysis Paragraph
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                96.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">96.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">96.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/27/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Identifying Elements of the Rhetorical Situation
+Category: Minor Grades
+Due Date: 08/27/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046251', '1', '1'); return false;">
+                                    Identifying Elements of the Rhetorical Situation
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                92.87
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">92.87</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">92.870%</td>
+		</tr>
+	</table>
+                <div class="sg-asp-table-group">
+                    <span id="plnMain_rptAssigmnetsByCourse_lblCategories_1" class="LabelCatogery">
+                        <div class="sg-view-quick sg-clearfix" >
+                            <div class="sg-header-group">
+                                <label id="plnMain_rptAssigmnetsByCourse_hdrCategories_1" CssClass="sg-header-heading">Categories</label>
+                            </div>
+                            <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseCategories_1" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td align="center" valign="middle">Category</td><td align="center" valign="middle">Student's<br>Points</td><td align="center" valign="middle"> / Maximum<br>Points</td><td align="center" valign="middle"> = Percent</td><td align="center" valign="middle"> * Category<br>Weight</td><td align="center" valign="middle"> = Category<br>Points</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Major Grades</td><td>179.0000</td><td>200.00</td><td>89.500%</td><td>60.00</td><td>53.70000</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Minor Grades</td><td>555.8700</td><td>600.00</td><td>92.645%</td><td>40.00</td><td>37.05800</td>
+		</tr><tr style="color:White;background-color:#CCCCCC;border-color:#CCCCCC;">
+			<td><b>Total Points:</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><b>100.00</b></td><td style="background-color:#CCCCCC;"><b>90.75800</b></td>
+		</tr>
+	</table>
+                            <br />
+                            
+                                <div style="display:inline-block;">
+                                <table id="plnMain_rptAssigmnetsByCourse_tblAverage_1" style="font-weight:bold;">
+		<tr>
+			<td><span id="plnMain_rptAssigmnetsByCourse_lblStudentOvAverage_1">Course overall average is:</span></td><td><span id="plnMain_rptAssigmnetsByCourse_lblStuPoints_1">90.75800</span></td><td>/</td><td><span id="plnMain_rptAssigmnetsByCourse_lblMaxPoints_1">100.00</span></td><td>=</td><td style="text-align: right"><span id="plnMain_rptAssigmnetsByCourse_lblOverallAverage_1">90.76</span></td><td>%</td>
+		</tr>
+	</table>
+                            </div>
+                            <span id="plnMain_rptAssigmnetsByCourse_lblShowAverages_1" class="sg-right">
+                                <button class="LabelCatogery sg-button"  id="btnShowAverages" onclick="btnShowAverages_onclick('4046251', '1'); return false;" title="Show all student's averages"  >Show All Averages</button>	
+                            </span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="AssignmentClass">
+            <div class="sg-header sg-header-square">
+                <button id="plnMain_rptAssigmnetsByCourse_btnShowHide_2" type="button" class="sg-button sg-button-show-hide sg-left sg-5px-margin icon-minus" onClick="javascript:return btnShowHide_onclick(event);"></button> 
+                 
+                    <a class="sg-header-heading" href="#" onclick="OpenClassPopUpWithMarkingPeriod('4046521',1); return false;">
+                        FLG23200A - 2    Spanish Language
+                    </a>    
+                <span id="plnMain_rptAssigmnetsByCourse_lblLastUpdDate_2" class="sg-header-sub-heading">(Last Updated: 12/17/2019)</span>
+                
+                <span id="plnMain_rptAssigmnetsByCourse_lblHdrAverage_2" class="sg-header-heading sg-right" title="">Student Grades 99.20%</span>    
+            </div>
+            <div class="sg-content-grid">
+                <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseAssignments_2" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td>Date Due</td><td>Date Assigned</td><td>Assignment</td><td>Category</td><td>Score</td><td>Total Points</td><td class="sg-view-quick">Weight</td><td class="sg-view-quick">Weighted Score</td><td class="sg-view-quick">Weighted Total Points</td><td class="sg-view-quick">Percentage</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/07/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Unit 1 Presentational Writing - Vocab and Structure
+Category: Major Grades
+Due Date: 10/07/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '15'); return false;">
+                                    Unit 1 Presentational Writing - Vocab and Structure
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/07/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Unit 1 Presentational Writing - Organization of essay
+Category: Major Grades
+Due Date: 10/07/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '14'); return false;">
+                                    Unit 1 Presentational Writing - Organization of essay
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/03/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Mi Pa&#237;s slideshow and presentation
+Category: Minor Grades
+Due Date: 10/03/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '11'); return false;">
+                                    Mi Pa&#237;s slideshow and presentation
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/27/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Interpretive Quiz (reading)
+Category: Minor Grades
+Due Date: 09/27/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '13'); return false;">
+                                    Interpretive Quiz (reading)
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                88.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">88.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">88.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/27/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Acorde&#243;n - presenational writing
+Category: Minor Grades
+Due Date: 09/27/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '12'); return false;">
+                                    Acorde&#243;n - presenational writing
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/11/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Unit 1 Speaking Vocab and Structure
+Category: Major Grades
+Due Date: 09/11/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '4'); return false;">
+                                    Unit 1 Speaking Vocab and Structure
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/11/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Unit 1 Speaking Task Completion
+Category: Major Grades
+Due Date: 09/11/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '3'); return false;">
+                                    Unit 1 Speaking Task Completion
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/09/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Presentaci&#243;n:Diapositiva Familiar
+Category: Minor Grades
+Due Date: 09/09/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '10'); return false;">
+                                    Presentaci&#243;n:Diapositiva Familiar
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/09/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Lectura: Skills Check
+Category: Minor Grades
+Due Date: 09/09/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '9'); return false;">
+                                    Lectura: Skills Check
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/05/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Presentational Writing Prueba 1.1
+Category: Minor Grades
+Due Date: 09/05/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '8'); return false;">
+                                    Presentational Writing Prueba 1.1
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                92.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">92.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">92.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/05/2019</td><td>08/23/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Acorde&#243;n de vocabulario
+Category: Minor Grades
+Due Date: 09/05/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '5'); return false;">
+                                    Acorde&#243;n de vocabulario
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/29/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Vocab Skills Check
+Category: Minor Grades
+Due Date: 08/29/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '7'); return false;">
+                                    Vocab Skills Check
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/23/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Diapositiva de vocabulario
+Category: Minor Grades
+Due Date: 08/23/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '6'); return false;">
+                                    Diapositiva de vocabulario
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                X
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">0.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/23/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Review Quiz
+Category: Minor Grades
+Due Date: 08/23/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '2'); return false;">
+                                    Review Quiz
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/19/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Google Form Quiz
+Category: Minor Grades
+Due Date: 08/19/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046521', '1', '1'); return false;">
+                                    Google Form Quiz
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr>
+	</table>
+                <div class="sg-asp-table-group">
+                    <span id="plnMain_rptAssigmnetsByCourse_lblCategories_2" class="LabelCatogery">
+                        <div class="sg-view-quick sg-clearfix" >
+                            <div class="sg-header-group">
+                                <label id="plnMain_rptAssigmnetsByCourse_hdrCategories_2" CssClass="sg-header-heading">Categories</label>
+                            </div>
+                            <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseCategories_2" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td align="center" valign="middle">Category</td><td align="center" valign="middle">Student's<br>Points</td><td align="center" valign="middle"> / Maximum<br>Points</td><td align="center" valign="middle"> = Percent</td><td align="center" valign="middle"> * Category<br>Weight</td><td align="center" valign="middle"> = Category<br>Points</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Major Grades</td><td>400.0000</td><td>400.00</td><td>100.000%</td><td>60.00</td><td>60.00000</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Minor Grades</td><td>980.0000</td><td>1000.00</td><td>98.000%</td><td>40.00</td><td>39.20000</td>
+		</tr><tr style="color:White;background-color:#CCCCCC;border-color:#CCCCCC;">
+			<td><b>Total Points:</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><b>100.00</b></td><td style="background-color:#CCCCCC;"><b>99.20000</b></td>
+		</tr>
+	</table>
+                            <br />
+                            
+                                <div style="display:inline-block;">
+                                <table id="plnMain_rptAssigmnetsByCourse_tblAverage_2" style="font-weight:bold;">
+		<tr>
+			<td><span id="plnMain_rptAssigmnetsByCourse_lblStudentOvAverage_2">Course overall average is:</span></td><td><span id="plnMain_rptAssigmnetsByCourse_lblStuPoints_2">99.20000</span></td><td>/</td><td><span id="plnMain_rptAssigmnetsByCourse_lblMaxPoints_2">100.00</span></td><td>=</td><td style="text-align: right"><span id="plnMain_rptAssigmnetsByCourse_lblOverallAverage_2">99.20</span></td><td>%</td>
+		</tr>
+	</table>
+                            </div>
+                            <span id="plnMain_rptAssigmnetsByCourse_lblShowAverages_2" class="sg-right">
+                                <button class="LabelCatogery sg-button"  id="btnShowAverages" onclick="btnShowAverages_onclick('4046521', '1'); return false;" title="Show all student's averages"  >Show All Averages</button>	
+                            </span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="AssignmentClass">
+            <div class="sg-header sg-header-square">
+                <button id="plnMain_rptAssigmnetsByCourse_btnShowHide_3" type="button" class="sg-button sg-button-show-hide sg-left sg-5px-margin icon-minus" onClick="javascript:return btnShowHide_onclick(event);"></button> 
+                 
+                    <a class="sg-header-heading" href="#" onclick="OpenClassPopUpWithMarkingPeriod('4046553',1); return false;">
+                        FNA11150A - 1    Professional Communications
+                    </a>    
+                <span id="plnMain_rptAssigmnetsByCourse_lblLastUpdDate_3" class="sg-header-sub-heading">(Last Updated: 1/6/2020)</span>
+                
+                <span id="plnMain_rptAssigmnetsByCourse_lblHdrAverage_3" class="sg-header-heading sg-right" title="">Student Grades 97.23%</span>    
+            </div>
+            <div class="sg-content-grid">
+                <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseAssignments_3" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td>Date Due</td><td>Date Assigned</td><td>Assignment</td><td>Category</td><td>Score</td><td>Total Points</td><td class="sg-view-quick">Weight</td><td class="sg-view-quick">Weighted Score</td><td class="sg-view-quick">Weighted Total Points</td><td class="sg-view-quick">Percentage</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/17/2019</td><td>10/01/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Sketchbook Check #2
+Category: Minor Grades
+Due Date: 10/17/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046553', '1', '8'); return false;">
+                                    Sketchbook Check #2
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                96.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">96.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">96.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/15/2019</td><td>10/03/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Cross Contour Portrait
+Category: Minor Grades
+Due Date: 10/15/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046553', '1', '7'); return false;">
+                                    Cross Contour Portrait
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                98.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">98.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">98.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/11/2019</td><td>10/01/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Contour Object Painting
+Category: Major Grades
+Due Date: 10/11/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046553', '1', '6'); return false;">
+                                    Contour Object Painting
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                98.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">98.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">98.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/27/2019</td><td>09/13/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Line Portrait
+Category: Minor Grades
+Due Date: 09/27/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046553', '1', '5'); return false;">
+                                    Line Portrait
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/25/2019</td><td>09/25/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Sketchbook Check
+Category: Minor Grades
+Due Date: 09/25/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046553', '1', '4'); return false;">
+                                    Sketchbook Check
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                96.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">96.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">96.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/11/2019</td><td>08/27/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Zentangle Project
+Category: Major Grades
+Due Date: 09/11/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046553', '1', '3'); return false;">
+                                    Zentangle Project
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                97.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">97.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">97.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/05/2019</td><td>08/23/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Line Worksheet
+Category: Minor Grades
+Due Date: 09/05/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046553', '1', '2'); return false;">
+                                    Line Worksheet
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                93.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">93.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">93.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/27/2019</td><td>08/19/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Name Drawing
+Category: Minor Grades
+Due Date: 08/27/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046553', '1', '1'); return false;">
+                                    Name Drawing
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                98.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">98.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">98.000%</td>
+		</tr>
+	</table>
+                <div class="sg-asp-table-group">
+                    <span id="plnMain_rptAssigmnetsByCourse_lblCategories_3" class="LabelCatogery">
+                        <div class="sg-view-quick sg-clearfix" >
+                            <div class="sg-header-group">
+                                <label id="plnMain_rptAssigmnetsByCourse_hdrCategories_3" CssClass="sg-header-heading">Categories</label>
+                            </div>
+                            <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseCategories_3" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td align="center" valign="middle">Category</td><td align="center" valign="middle">Student's<br>Points</td><td align="center" valign="middle"> / Maximum<br>Points</td><td align="center" valign="middle"> = Percent</td><td align="center" valign="middle"> * Category<br>Weight</td><td align="center" valign="middle"> = Category<br>Points</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Major Grades</td><td>195.0000</td><td>200.00</td><td>97.500%</td><td>60.00</td><td>58.50000</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Minor Grades</td><td>581.0000</td><td>600.00</td><td>96.833%</td><td>40.00</td><td>38.73320</td>
+		</tr><tr style="color:White;background-color:#CCCCCC;border-color:#CCCCCC;">
+			<td><b>Total Points:</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><b>100.00</b></td><td style="background-color:#CCCCCC;"><b>97.23320</b></td>
+		</tr>
+	</table>
+                            <br />
+                            
+                                <div style="display:inline-block;">
+                                <table id="plnMain_rptAssigmnetsByCourse_tblAverage_3" style="font-weight:bold;">
+		<tr>
+			<td><span id="plnMain_rptAssigmnetsByCourse_lblStudentOvAverage_3">Course overall average is:</span></td><td><span id="plnMain_rptAssigmnetsByCourse_lblStuPoints_3">97.23320</span></td><td>/</td><td><span id="plnMain_rptAssigmnetsByCourse_lblMaxPoints_3">100.00</span></td><td>=</td><td style="text-align: right"><span id="plnMain_rptAssigmnetsByCourse_lblOverallAverage_3">97.23</span></td><td>%</td>
+		</tr>
+	</table>
+                            </div>
+                            <span id="plnMain_rptAssigmnetsByCourse_lblShowAverages_3" class="sg-right">
+                                <button class="LabelCatogery sg-button"  id="btnShowAverages" onclick="btnShowAverages_onclick('4046553', '1'); return false;" title="Show all student's averages"  >Show All Averages</button>	
+                            </span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="AssignmentClass">
+            <div class="sg-header sg-header-square">
+                <button id="plnMain_rptAssigmnetsByCourse_btnShowHide_4" type="button" class="sg-button sg-button-show-hide sg-left sg-5px-margin icon-minus" onClick="javascript:return btnShowHide_onclick(event);"></button> 
+                 
+                    <a class="sg-header-heading" href="#" onclick="OpenClassPopUpWithMarkingPeriod('4046972',1); return false;">
+                        MTH45300A - 5    Calculus AB
+                    </a>    
+                <span id="plnMain_rptAssigmnetsByCourse_lblLastUpdDate_4" class="sg-header-sub-heading">(Last Updated: 12/17/2019)</span>
+                
+                <span id="plnMain_rptAssigmnetsByCourse_lblHdrAverage_4" class="sg-header-heading sg-right" title="">Student Grades 96.57%</span>    
+            </div>
+            <div class="sg-content-grid">
+                <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseAssignments_4" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td>Date Due</td><td>Date Assigned</td><td>Assignment</td><td>Category</td><td>Score</td><td>Total Points</td><td class="sg-view-quick">Weight</td><td class="sg-view-quick">Weighted Score</td><td class="sg-view-quick">Weighted Total Points</td><td class="sg-view-quick">Percentage</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/09/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Group Quiz on Differentiation
+Category: Minor Grades
+Due Date: 10/09/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '15'); return false;">
+                                    Group Quiz on Differentiation
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.33</td><td class="sg-view-quick">33.00</td><td class="sg-view-quick">33.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/07/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Group: Derivatives Skill Check
+Category: Minor Grades
+Due Date: 10/07/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '14'); return false;">
+                                    Group: Derivatives Skill Check
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.33</td><td class="sg-view-quick">33.00</td><td class="sg-view-quick">33.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/01/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Chain Rule &amp; Implicit Quiz
+Category: Minor Grades
+Due Date: 10/01/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '16'); return false;">
+                                    Chain Rule &amp; Implicit Quiz
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                99.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">99.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">99.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/27/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Group: Chain Rule &amp; Implicit Skill Check
+Category: Minor Grades
+Due Date: 09/27/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '13'); return false;">
+                                    Group: Chain Rule &amp; Implicit Skill Check
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                99.00
+                            </td><td>100.00</td><td class="sg-view-quick">0.33</td><td class="sg-view-quick">32.67</td><td class="sg-view-quick">33.00</td><td class="sg-view-quick">99.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/19/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Derivatives Test
+Category: Major Grades
+Due Date: 09/19/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '12'); return false;">
+                                    Derivatives Test
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/17/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Group: Chain Rule Skill Check
+Category: Minor Grades
+Due Date: 09/17/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '11'); return false;">
+                                    Group: Chain Rule Skill Check
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                78.00
+                            </td><td>100.00</td><td class="sg-view-quick">0.33</td><td class="sg-view-quick">25.74</td><td class="sg-view-quick">33.00</td><td class="sg-view-quick">78.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/13/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Group: Derivatives Skill Check
+Category: Minor Grades
+Due Date: 09/13/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '10'); return false;">
+                                    Group: Derivatives Skill Check
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.33</td><td class="sg-view-quick">33.00</td><td class="sg-view-quick">33.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/11/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Derivatives Quiz
+Category: Minor Grades
+Due Date: 09/11/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '9'); return false;">
+                                    Derivatives Quiz
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/10/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Group: AROC IROC Skill Check
+Category: Minor Grades
+Due Date: 09/10/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '8'); return false;">
+                                    Group: AROC IROC Skill Check
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                98.00
+                            </td><td>100.00</td><td class="sg-view-quick">0.33</td><td class="sg-view-quick">32.34</td><td class="sg-view-quick">33.00</td><td class="sg-view-quick">98.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/03/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Limits Test
+Category: Major Grades
+Due Date: 09/03/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '7'); return false;">
+                                    Limits Test
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                92.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">92.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">92.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/29/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Average of Skill Checks &amp; Group Quiz
+Category: Minor Grades
+Due Date: 08/29/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '6'); return false;">
+                                    Average of Skill Checks &amp; Group Quiz
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0<img align="absmiddle" src="../../media/images/legacy/notes.png" class="comment-tooltip" style="cursor: help" title="Dropped one">
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/29/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Group Quiz
+Category: Minor Grades
+Due Date: 08/29/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '5'); return false;">
+                                    Group Quiz
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                95.00
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">95.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/23/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Group: Graphical Limits Skill Check
+Category: Minor Grades
+Due Date: 08/23/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '4'); return false;">
+                                    Group: Graphical Limits Skill Check
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/23/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: PreCal Quiz (Curved)
+Category: Minor Grades
+Due Date: 08/23/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '3'); return false;">
+                                    PreCal Quiz (Curved)
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                93.80<img align="absmiddle" src="../../media/images/legacy/notes.png" class="comment-tooltip" style="cursor: help" title="91">
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">93.80</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">93.800%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/21/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Trig Skill Check
+Category: Minor Grades
+Due Date: 08/21/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '2'); return false;">
+                                    Trig Skill Check
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/19/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Group: Pre-Cal Skill Check
+Category: Minor Grades
+Due Date: 08/19/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4046972', '1', '1'); return false;">
+                                    Group: Pre-Cal Skill Check
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.000%</td>
+		</tr>
+	</table>
+                <div class="sg-asp-table-group">
+                    <span id="plnMain_rptAssigmnetsByCourse_lblCategories_4" class="LabelCatogery">
+                        <div class="sg-view-quick sg-clearfix" >
+                            <div class="sg-header-group">
+                                <label id="plnMain_rptAssigmnetsByCourse_hdrCategories_4" CssClass="sg-header-heading">Categories</label>
+                            </div>
+                            <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseCategories_4" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td align="center" valign="middle">Category</td><td align="center" valign="middle">Student's<br>Points</td><td align="center" valign="middle"> / Maximum<br>Points</td><td align="center" valign="middle"> = Percent</td><td align="center" valign="middle"> * Category<br>Weight</td><td align="center" valign="middle"> = Category<br>Points</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Major Grades</td><td>192.0000</td><td>200.00</td><td>96.000%</td><td>60.00</td><td>57.60000</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Minor Grades</td><td>582.5500</td><td>598.00</td><td>97.416%</td><td>40.00</td><td>38.96640</td>
+		</tr><tr style="color:White;background-color:#CCCCCC;border-color:#CCCCCC;">
+			<td><b>Total Points:</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><b>100.00</b></td><td style="background-color:#CCCCCC;"><b>96.56640</b></td>
+		</tr>
+	</table>
+                            <br />
+                            
+                                <div style="display:inline-block;">
+                                <table id="plnMain_rptAssigmnetsByCourse_tblAverage_4" style="font-weight:bold;">
+		<tr>
+			<td><span id="plnMain_rptAssigmnetsByCourse_lblStudentOvAverage_4">Course overall average is:</span></td><td><span id="plnMain_rptAssigmnetsByCourse_lblStuPoints_4">96.56640</span></td><td>/</td><td><span id="plnMain_rptAssigmnetsByCourse_lblMaxPoints_4">100.00</span></td><td>=</td><td style="text-align: right"><span id="plnMain_rptAssigmnetsByCourse_lblOverallAverage_4">96.57</span></td><td>%</td>
+		</tr>
+	</table>
+                            </div>
+                            <span id="plnMain_rptAssigmnetsByCourse_lblShowAverages_4" class="sg-right">
+                                <button class="LabelCatogery sg-button"  id="btnShowAverages" onclick="btnShowAverages_onclick('4046972', '1'); return false;" title="Show all student's averages"  >Show All Averages</button>	
+                            </span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="AssignmentClass">
+            <div class="sg-header sg-header-square">
+                <button id="plnMain_rptAssigmnetsByCourse_btnShowHide_5" type="button" class="sg-button sg-button-show-hide sg-left sg-5px-margin icon-minus" onClick="javascript:return btnShowHide_onclick(event);"></button> 
+                 
+                    <a class="sg-header-heading" href="#" onclick="OpenClassPopUpWithMarkingPeriod('4047151',1); return false;">
+                        SCI34500A - 2    3D Modeling
+                    </a>    
+                <span id="plnMain_rptAssigmnetsByCourse_lblLastUpdDate_5" class="sg-header-sub-heading">(Last Updated: 12/20/2019)</span>
+                
+                <span id="plnMain_rptAssigmnetsByCourse_lblHdrAverage_5" class="sg-header-heading sg-right" title="">Student Grades 100.33%</span>    
+            </div>
+            <div class="sg-content-grid">
+                <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseAssignments_5" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td>Date Due</td><td>Date Assigned</td><td>Assignment</td><td>Category</td><td>Score</td><td>Total Points</td><td class="sg-view-quick">Weight</td><td class="sg-view-quick">Weighted Score</td><td class="sg-view-quick">Weighted Total Points</td><td class="sg-view-quick">Percentage</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/18/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Learning Gains (Retest) 2.2 - Dynamic Fluids
+Category: Major Grades
+Due Date: 10/18/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: Y
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '30'); return false;">
+                                    Learning Gains (Retest) 2.2 - Dynamic Fluids
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                X
+                            </td><td>N/A</td><td class="sg-view-quick">N/A</td><td class="sg-view-quick">N/A</td><td class="sg-view-quick">N/A</td><td class="sg-view-quick">0.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/18/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Learning Gains (Retest) 2.1 - Energy
+Category: Major Grades
+Due Date: 10/18/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: Y
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '29'); return false;">
+                                    Learning Gains (Retest) 2.1 - Energy
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                X
+                            </td><td>N/A</td><td class="sg-view-quick">N/A</td><td class="sg-view-quick">N/A</td><td class="sg-view-quick">N/A</td><td class="sg-view-quick">0.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/16/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Archimedes&#39;s Principle Lab Report: Data &amp; Analysis (Final)
+Category: Minor Grades
+Due Date: 10/16/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '34'); return false;">
+                                    Archimedes&#39;s Principle Lab Report: Data &amp; Analysis (Final)
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/16/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Archimedes&#39;s Principle Lab Report: Experimental Design (Final)
+Category: Minor Grades
+Due Date: 10/16/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '33'); return false;">
+                                    Archimedes&#39;s Principle Lab Report: Experimental Design (Final)
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/10/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Skills Check: Temperature &amp; Kinetic Energy
+Category: Minor Grades
+Due Date: 10/10/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '36'); return false;">
+                                    Skills Check: Temperature &amp; Kinetic Energy
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                95.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">95.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">95.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/10/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: MP #6: Temperature and Kinetic Energy
+Category: Minor Grades
+Due Date: 10/10/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '35'); return false;">
+                                    MP #6: Temperature and Kinetic Energy
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                46.15
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">46.150%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/04/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Group Test 2.2 - Dynamic Fluids
+Category: Minor Grades
+Due Date: 10/04/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '28'); return false;">
+                                    Group Test 2.2 - Dynamic Fluids
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                103.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">103.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">103.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/04/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Group Test 2.1 - Energy
+Category: Minor Grades
+Due Date: 10/04/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '27'); return false;">
+                                    Group Test 2.1 - Energy
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                105.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">105.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">105.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/02/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Test 2.2 - Dynamic Fluids
+Category: Major Grades
+Due Date: 10/02/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '26'); return false;">
+                                    Test 2.2 - Dynamic Fluids
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                101.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">101.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">101.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/02/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Test 2.1 - Energy
+Category: Major Grades
+Due Date: 10/02/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '25'); return false;">
+                                    Test 2.1 - Energy
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                99.00
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">99.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">99.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/30/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Skills Check: Bernoulli&#39;s Equation
+Category: Minor Grades
+Due Date: 09/30/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '31'); return false;">
+                                    Skills Check: Bernoulli&#39;s Equation
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/30/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: MP #5: Bernoulli&#39;s Equation
+Category: Minor Grades
+Due Date: 09/30/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '24'); return false;">
+                                    MP #5: Bernoulli&#39;s Equation
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/26/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Skills Check: Energy
+Category: Minor Grades
+Due Date: 09/26/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '23'); return false;">
+                                    Skills Check: Energy
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/26/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: MP: Energy Review, Part 2
+Category: Minor Grades
+Due Date: 09/26/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '22'); return false;">
+                                    MP: Energy Review, Part 2
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/26/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Learning Gains (Retest) 1.2 - Static Fluids
+Category: Major Grades
+Due Date: 09/26/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: Y
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '12'); return false;">
+                                    Learning Gains (Retest) 1.2 - Static Fluids
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                X
+                            </td><td>N/A</td><td class="sg-view-quick">N/A</td><td class="sg-view-quick">N/A</td><td class="sg-view-quick">N/A</td><td class="sg-view-quick">0.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/26/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Learning Gains (Retest) 1.1
+Category: Major Grades
+Due Date: 09/26/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: Y
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '10'); return false;">
+                                    Learning Gains (Retest) 1.1
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                X
+                            </td><td>N/A</td><td class="sg-view-quick">N/A</td><td class="sg-view-quick">N/A</td><td class="sg-view-quick">N/A</td><td class="sg-view-quick">0.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/24/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: MP: Energy Review, Part 1
+Category: Minor Grades
+Due Date: 09/24/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '21'); return false;">
+                                    MP: Energy Review, Part 1
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/20/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Skills Check: Fluid Flow Rates
+Category: Minor Grades
+Due Date: 09/20/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '20'); return false;">
+                                    Skills Check: Fluid Flow Rates
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/20/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: MP #4: Fluid Flow Rates
+Category: Minor Grades
+Due Date: 09/20/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '19'); return false;">
+                                    MP #4: Fluid Flow Rates
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/18/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Group Test 1.2 - Static Fluids
+Category: Minor Grades
+Due Date: 09/18/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '14'); return false;">
+                                    Group Test 1.2 - Static Fluids
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                102.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">102.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">102.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/18/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Group Test 1.1 - Forces
+Category: Minor Grades
+Due Date: 09/18/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '13'); return false;">
+                                    Group Test 1.1 - Forces
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                101.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">101.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">101.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/16/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: DRAFT GRADE FOR Lab: Archimedes&#39;s Principle (Data and Analysis)
+Category: Minor Grades
+Due Date: 09/16/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '18'); return false;">
+                                    DRAFT GRADE FOR Lab: Archimedes&#39;s Principle (Data and Analysis)
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                83.00
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">83.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/16/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: DRAFT GRADE FOR Lab: Archimedes&#39;s Principle (Experimental Design)
+Category: Minor Grades
+Due Date: 09/16/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '17'); return false;">
+                                    DRAFT GRADE FOR Lab: Archimedes&#39;s Principle (Experimental Design)
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/16/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Test 1.2 - Static Fluids
+Category: Major Grades
+Due Date: 09/16/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '11'); return false;">
+                                    Test 1.2 - Static Fluids
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/16/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Test 1.1 - Forces
+Category: Major Grades
+Due Date: 09/16/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '9'); return false;">
+                                    Test 1.1 - Forces
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                101.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">101.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">101.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/12/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Skills Check: Buoyancy
+Category: Minor Grades
+Due Date: 09/12/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '16'); return false;">
+                                    Skills Check: Buoyancy
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/12/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: MP #3: Buoyancy
+Category: Minor Grades
+Due Date: 09/12/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '15'); return false;">
+                                    MP #3: Buoyancy
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                95.83
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">95.830%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/06/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Skills Check: Density and Pressure
+Category: Minor Grades
+Due Date: 09/06/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '8'); return false;">
+                                    Skills Check: Density and Pressure
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/04/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: MP #2: Pressure
+Category: Minor Grades
+Due Date: 09/04/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '6'); return false;">
+                                    MP #2: Pressure
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/28/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Skills Check: Forces
+Category: Minor Grades
+Due Date: 08/28/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '7'); return false;">
+                                    Skills Check: Forces
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/28/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: MP: Forces Review, Part 2
+Category: Minor Grades
+Due Date: 08/28/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '5'); return false;">
+                                    MP: Forces Review, Part 2
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/26/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: MP: Forces Review, Part 1
+Category: Minor Grades
+Due Date: 08/26/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '4'); return false;">
+                                    MP: Forces Review, Part 1
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/26/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: MP #1: Density
+Category: Minor Grades
+Due Date: 08/26/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047151', '1', '3'); return false;">
+                                    MP #1: Density
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.000%</td>
+		</tr>
+	</table>
+                <div class="sg-asp-table-group">
+                    <span id="plnMain_rptAssigmnetsByCourse_lblCategories_5" class="LabelCatogery">
+                        <div class="sg-view-quick sg-clearfix" >
+                            <div class="sg-header-group">
+                                <label id="plnMain_rptAssigmnetsByCourse_hdrCategories_5" CssClass="sg-header-heading">Categories</label>
+                            </div>
+                            <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseCategories_5" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td align="center" valign="middle">Category</td><td align="center" valign="middle">Student's<br>Points</td><td align="center" valign="middle"> / Maximum<br>Points</td><td align="center" valign="middle"> = Percent</td><td align="center" valign="middle"> * Category<br>Weight</td><td align="center" valign="middle"> = Category<br>Points</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Major Grades</td><td>401.0000</td><td>400.00</td><td>100.250%</td><td>60.00</td><td>60.15000</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Minor Grades</td><td>1306.0000</td><td>1300.00</td><td>100.461%</td><td>40.00</td><td>40.18480</td>
+		</tr><tr style="color:White;background-color:#CCCCCC;border-color:#CCCCCC;">
+			<td><b>Total Points:</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><b>100.00</b></td><td style="background-color:#CCCCCC;"><b>100.33480</b></td>
+		</tr>
+	</table>
+                            <br />
+                            
+                                <div style="display:inline-block;">
+                                <table id="plnMain_rptAssigmnetsByCourse_tblAverage_5" style="font-weight:bold;">
+		<tr>
+			<td><span id="plnMain_rptAssigmnetsByCourse_lblStudentOvAverage_5">Course overall average is:</span></td><td><span id="plnMain_rptAssigmnetsByCourse_lblStuPoints_5">100.33480</span></td><td>/</td><td><span id="plnMain_rptAssigmnetsByCourse_lblMaxPoints_5">100.00</span></td><td>=</td><td style="text-align: right"><span id="plnMain_rptAssigmnetsByCourse_lblOverallAverage_5">100.33</span></td><td>%</td>
+		</tr>
+	</table>
+                            </div>
+                            <span id="plnMain_rptAssigmnetsByCourse_lblShowAverages_5" class="sg-right">
+                                <button class="LabelCatogery sg-button"  id="btnShowAverages" onclick="btnShowAverages_onclick('4047151', '1'); return false;" title="Show all student's averages"  >Show All Averages</button>	
+                            </span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="AssignmentClass">
+            <div class="sg-header sg-header-square">
+                <button id="plnMain_rptAssigmnetsByCourse_btnShowHide_6" type="button" class="sg-button sg-button-show-hide sg-left sg-5px-margin icon-minus" onClick="javascript:return btnShowHide_onclick(event);"></button> 
+                 
+                    <a class="sg-header-heading" href="#" onclick="OpenClassPopUpWithMarkingPeriod('4047494',1); return false;">
+                        SST23300A - 6    United States History
+                    </a>    
+                <span id="plnMain_rptAssigmnetsByCourse_lblLastUpdDate_6" class="sg-header-sub-heading">(Last Updated: 1/6/2020)</span>
+                
+                <span id="plnMain_rptAssigmnetsByCourse_lblHdrAverage_6" class="sg-header-heading sg-right" title="">Student Grades 97.65%</span>    
+            </div>
+            <div class="sg-content-grid">
+                <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseAssignments_6" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td>Date Due</td><td>Date Assigned</td><td>Assignment</td><td>Category</td><td>Score</td><td>Total Points</td><td class="sg-view-quick">Weight</td><td class="sg-view-quick">Weighted Score</td><td class="sg-view-quick">Weighted Total Points</td><td class="sg-view-quick">Percentage</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/10/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Period 4_MCQ Test
+Category: Major Grades
+Due Date: 10/10/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047494', '1', '16'); return false;">
+                                    Period 4_MCQ Test
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                92.00
+                            </td><td>100.00</td><td class="sg-view-quick">0.49</td><td class="sg-view-quick">45.08</td><td class="sg-view-quick">49.00</td><td class="sg-view-quick">92.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/10/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Period 3- MCQ Test
+Category: Major Grades
+Due Date: 10/10/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047494', '1', '15'); return false;">
+                                    Period 3- MCQ Test
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                110.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.24</td><td class="sg-view-quick">26.40</td><td class="sg-view-quick">24.00</td><td class="sg-view-quick">110.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/10/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Period 2- MCQ Test
+Category: Major Grades
+Due Date: 10/10/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047494', '1', '14'); return false;">
+                                    Period 2- MCQ Test
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                75.00
+                            </td><td>100.00</td><td class="sg-view-quick">0.22</td><td class="sg-view-quick">16.50</td><td class="sg-view-quick">22.00</td><td class="sg-view-quick">75.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/10/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Period 1- MCQ Test
+Category: Major Grades
+Due Date: 10/10/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047494', '1', '13'); return false;">
+                                    Period 1- MCQ Test
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                105.0
+                            </td><td>100.00</td><td class="sg-view-quick">0.05</td><td class="sg-view-quick">5.25</td><td class="sg-view-quick">5.00</td><td class="sg-view-quick">105.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/01/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Period 4 Reading Check MCQ
+Category: Minor Grades
+Due Date: 10/01/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047494', '1', '10'); return false;">
+                                    Period 4 Reading Check MCQ
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/17/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Skill- Comparison of Federalist V Democratic Republican
+Category: Minor Grades
+Due Date: 09/17/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047494', '1', '9'); return false;">
+                                    Skill- Comparison of Federalist V Democratic Republican
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/17/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: LEQ
+Category: Major Grades
+Due Date: 09/17/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047494', '1', '7'); return false;">
+                                    LEQ
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/13/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Period 3 SAQ Reading Check
+Category: Minor Grades
+Due Date: 09/13/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047494', '1', '8'); return false;">
+                                    Period 3 SAQ Reading Check
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/04/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Skill- Evidence
+Category: Minor Grades
+Due Date: 09/04/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047494', '1', '4'); return false;">
+                                    Skill- Evidence
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CNS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">0.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/03/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Skill- Comparison
+Category: Minor Grades
+Due Date: 09/03/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047494', '1', '5'); return false;">
+                                    Skill- Comparison
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                95.10
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">95.10</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">95.100%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/29/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Skill- Assertion
+Category: Minor Grades
+Due Date: 08/29/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047494', '1', '3'); return false;">
+                                    Skill- Assertion
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.1
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.10</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.100%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/28/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Period 2 reading Check- MCQ
+Category: Minor Grades
+Due Date: 08/28/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047494', '1', '2'); return false;">
+                                    Period 2 reading Check- MCQ
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CNS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">0.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">0.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/26/2019</td><td>&nbsp;</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Period 1 reading check- SAQ
+Category: Minor Grades
+Due Date: 08/26/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047494', '1', '1'); return false;">
+                                    Period 1 reading check- SAQ
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr>
+	</table>
+                <div class="sg-asp-table-group">
+                    <span id="plnMain_rptAssigmnetsByCourse_lblCategories_6" class="LabelCatogery">
+                        <div class="sg-view-quick sg-clearfix" >
+                            <div class="sg-header-group">
+                                <label id="plnMain_rptAssigmnetsByCourse_hdrCategories_6" CssClass="sg-header-heading">Categories</label>
+                            </div>
+                            <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseCategories_6" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td align="center" valign="middle">Category</td><td align="center" valign="middle">Student's<br>Points</td><td align="center" valign="middle"> / Maximum<br>Points</td><td align="center" valign="middle"> = Percent</td><td align="center" valign="middle"> * Category<br>Weight</td><td align="center" valign="middle"> = Category<br>Points</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Major Grades</td><td>193.2300</td><td>200.00</td><td>96.615%</td><td>60.00</td><td>57.96900</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Minor Grades</td><td>595.2000</td><td>600.00</td><td>99.200%</td><td>40.00</td><td>39.68000</td>
+		</tr><tr style="color:White;background-color:#CCCCCC;border-color:#CCCCCC;">
+			<td><b>Total Points:</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><b>100.00</b></td><td style="background-color:#CCCCCC;"><b>97.64900</b></td>
+		</tr>
+	</table>
+                            <br />
+                            
+                                <div style="display:inline-block;">
+                                <table id="plnMain_rptAssigmnetsByCourse_tblAverage_6" style="font-weight:bold;">
+		<tr>
+			<td><span id="plnMain_rptAssigmnetsByCourse_lblStudentOvAverage_6">Course overall average is:</span></td><td><span id="plnMain_rptAssigmnetsByCourse_lblStuPoints_6">97.64900</span></td><td>/</td><td><span id="plnMain_rptAssigmnetsByCourse_lblMaxPoints_6">100.00</span></td><td>=</td><td style="text-align: right"><span id="plnMain_rptAssigmnetsByCourse_lblOverallAverage_6">97.65</span></td><td>%</td>
+		</tr>
+	</table>
+                            </div>
+                            <span id="plnMain_rptAssigmnetsByCourse_lblShowAverages_6" class="sg-right">
+                                <button class="LabelCatogery sg-button"  id="btnShowAverages" onclick="btnShowAverages_onclick('4047494', '1'); return false;" title="Show all student's averages"  >Show All Averages</button>	
+                            </span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="AssignmentClass">
+            <div class="sg-header sg-header-square">
+                <button id="plnMain_rptAssigmnetsByCourse_btnShowHide_7" type="button" class="sg-button sg-button-show-hide sg-left sg-5px-margin icon-minus" onClick="javascript:return btnShowHide_onclick(event);"></button> 
+                 
+                    <a class="sg-header-heading" href="#" onclick="OpenClassPopUpWithMarkingPeriod('4047742',1); return false;">
+                        TEC22200A - 1    Advanced Computer Science
+                    </a>    
+                <span id="plnMain_rptAssigmnetsByCourse_lblLastUpdDate_7" class="sg-header-sub-heading">(Last Updated: 12/19/2019)</span>
+                
+                <span id="plnMain_rptAssigmnetsByCourse_lblHdrAverage_7" class="sg-header-heading sg-right" title="">Student Grades 100.00%</span>    
+            </div>
+            <div class="sg-content-grid">
+                <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseAssignments_7" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td>Date Due</td><td>Date Assigned</td><td>Assignment</td><td>Category</td><td>Score</td><td>Total Points</td><td class="sg-view-quick">Weight</td><td class="sg-view-quick">Weighted Score</td><td class="sg-view-quick">Weighted Total Points</td><td class="sg-view-quick">Percentage</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/18/2019</td><td>10/18/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Lab07-MyLinkedList (checkpoint)
+Category: Minor Grades
+Due Date: 10/18/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047742', '1', '8'); return false;">
+                                    Lab07-MyLinkedList (checkpoint)
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/10/2019</td><td>10/04/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Lab06-GuitarHero
+Category: Major Grades
+Due Date: 10/10/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047742', '1', '7'); return false;">
+                                    Lab06-GuitarHero
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>10/02/2019</td><td>09/26/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Lab05-WordLadder
+Category: Minor Grades
+Due Date: 10/02/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047742', '1', '6'); return false;">
+                                    Lab05-WordLadder
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/24/2019</td><td>09/24/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Test01
+Category: Major Grades
+Due Date: 09/24/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047742', '1', '5'); return false;">
+                                    Test01
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Major Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/20/2019</td><td>09/16/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Lab04-MelodyMaker
+Category: Minor Grades
+Due Date: 09/20/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047742', '1', '4'); return false;">
+                                    Lab04-MelodyMaker
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>09/20/2019</td><td>09/20/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Quiz01-Queues
+Category: Minor Grades
+Due Date: 09/20/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047742', '1', '3'); return false;">
+                                    Quiz01-Queues
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/28/2019</td><td>08/26/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Introduction to Stacks
+Category: Minor Grades
+Due Date: 08/28/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047742', '1', '2'); return false;">
+                                    Introduction to Stacks
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                100.0
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.000%</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>08/26/2019</td><td>08/16/2019</td><td>
+                                <a title="Title: Assignment Course
+Classwork: Java review
+Category: Minor Grades
+Due Date: 08/26/2019
+Max Points: 100.00
+Can Be Dropped: Y
+Extra Credit: N
+Has Attachments: N" 
+                                    href="#" onclick="OpenAssignmentPopUp('4047742', '1', '1'); return false;">
+                                    Java review
+                                </a>
+                                <label style="display:none">*</label>
+                            </td><td>Minor Grades</td><td>
+                                CWS
+                            </td><td>100.00</td><td class="sg-view-quick">1.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00</td><td class="sg-view-quick">100.00%</td>
+		</tr>
+	</table>
+                <div class="sg-asp-table-group">
+                    <span id="plnMain_rptAssigmnetsByCourse_lblCategories_7" class="LabelCatogery">
+                        <div class="sg-view-quick sg-clearfix" >
+                            <div class="sg-header-group">
+                                <label id="plnMain_rptAssigmnetsByCourse_hdrCategories_7" CssClass="sg-header-heading">Categories</label>
+                            </div>
+                            <table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_rptAssigmnetsByCourse_dgCourseCategories_7" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<td align="center" valign="middle">Category</td><td align="center" valign="middle">Student's<br>Points</td><td align="center" valign="middle"> / Maximum<br>Points</td><td align="center" valign="middle"> = Percent</td><td align="center" valign="middle"> * Category<br>Weight</td><td align="center" valign="middle"> = Category<br>Points</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Major Grades</td><td>200.0000</td><td>200.00</td><td>100.000%</td><td>60.00</td><td>60.00000</td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>Minor Grades</td><td>600.0000</td><td>600.00</td><td>100.000%</td><td>40.00</td><td>40.00000</td>
+		</tr><tr style="color:White;background-color:#CCCCCC;border-color:#CCCCCC;">
+			<td><b>Total Points:</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><b>100.00</b></td><td style="background-color:#CCCCCC;"><b>100.00000</b></td>
+		</tr>
+	</table>
+                            <br />
+                            
+                                <div style="display:inline-block;">
+                                <table id="plnMain_rptAssigmnetsByCourse_tblAverage_7" style="font-weight:bold;">
+		<tr>
+			<td><span id="plnMain_rptAssigmnetsByCourse_lblStudentOvAverage_7">Course overall average is:</span></td><td><span id="plnMain_rptAssigmnetsByCourse_lblStuPoints_7">100.00000</span></td><td>/</td><td><span id="plnMain_rptAssigmnetsByCourse_lblMaxPoints_7">100.00</span></td><td>=</td><td style="text-align: right"><span id="plnMain_rptAssigmnetsByCourse_lblOverallAverage_7">100.00</span></td><td>%</td>
+		</tr>
+	</table>
+                            </div>
+                            <span id="plnMain_rptAssigmnetsByCourse_lblShowAverages_7" class="sg-right">
+                                <button class="LabelCatogery sg-button"  id="btnShowAverages" onclick="btnShowAverages_onclick('4047742', '1'); return false;" title="Show all student's averages"  >Show All Averages</button>	
+                            </span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+            
+    
+
+    
+    
+    
+  
+</div>
+  
+
+            
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("plnMain_vsAvgValidate"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var plnMain_vsAvgValidate = document.all ? document.all["plnMain_vsAvgValidate"] : document.getElementById("plnMain_vsAvgValidate");
+plnMain_vsAvgValidate.headertext = "The following errors were found:";
+plnMain_vsAvgValidate.showmessagebox = "True";
+plnMain_vsAvgValidate.showsummary = "False";
+plnMain_vsAvgValidate.validationGroup = "AvgValidate";
+//]]>
+</script>
+</form>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            // Build the jQuery UI buttons
+            $('.sg-buttonset').buttonset();
+            $('.sg-button').button();
+            window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height()); // set the init size
+            // Increase length of smaller content windows to reduce cutoffs in dropdowns. 
+            var iframeHeight = window.parent.$('.sg-legacy-iframe').height(); 
+            if (iframeHeight < 450)
+            { window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height() + 200); }
+           
+        })
+    </script>
+</body>
+</html>

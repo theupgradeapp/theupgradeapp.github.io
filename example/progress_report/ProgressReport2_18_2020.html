@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html>
+<head><title>
+	HomeAccess
+</title>
+    
+    <link href="/HomeAccess/Stylesheets/Themes/custom-theme/jquery?v=khU3GP_ixo8tMiLwXJEqkRywEE1c7SBpfpbj4KSDyXA1" rel="Stylesheet" type="text/css" /> 
+
+    
+    <link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=CrossSite" />
+    <link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=ComboBox" />
+    <link rel="Stylesheet" href="../../Stylesheets/Common/font-awesome.css" />
+    
+    
+    <link rel="Stylesheet" href="../../Stylesheets/Site.css" />
+    <link rel="stylesheet" href="../../Stylesheets/Frame/Frame.css" /> 
+    <link rel="SHORTCUT ICON" href="../../Media/Themes/Base/Common/favicon.ico"/>
+    <style>
+        .sg-asp-table-header-row,
+        .ui-jqgrid-view .ui-jqgrid-hdiv, 
+        .ui-jqgrid tr.ui-jqgrid-labels th  {
+	        background-color: #00427c;
+            color: #FFFFFF;
+        }
+    </style>
+
+    <script src="/HomeAccess/Scripts/libs/jquery?v=kFkgd6hNofX_b_JGNSXAqVYLW6XzxJEd8j1YdcwKx3I1" type="text/javascript"></script>   
+    <script src="../../Scripts/libs/modernizr-2.8.3.js" type="text/javascript"></script>   
+    <script src="../../Scripts/Trirand/ui.multiselect.js" type="text/javascript" ></script>
+    <script src="../../Scripts/Trirand/i18n/grid.locale-en.js" type="text/javascript"></script>
+    <script src="../../Scripts/Trirand/jquery.jqGrid.js" type="text/javascript"></script>
+    <script src="../../Scripts/libs/json2.js" type="text/javascript"></script>
+    <script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=SungardCommon" type="text/javascript"></script>    
+    <script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=Combobox" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            parseForComboBoxes();
+        });
+    </script>    
+    
+
+    <script type="text/javascript">
+        $(SunGard.Common.Init('/HomeAccess/'));
+    </script>
+    
+    
+    
+	<script type="text/javascript" src="OpenClassPopUp.js"></script>
+    <script type="text/javascript" src="../Common/Validation.js"></script>
+     <script type="text/javascript" >
+        function PrintInterimProgressDetail() {
+            window.open("ReportCardDetailReport.aspx?rundate=" + $("#plnMain_ddlIPRDates").val() + "&type=ipr", null, "status=no,menubar=no,toolbar=no,top=50,left=50,width=600,height=450");
+                return false;
+        }
+    </script>
+</head>
+<body>
+    
+    <div id='MainContent' class='sg-main-content'>
+        <div class='sg-hac-content'>
+            <form method="post" action="./InterimProgress.aspx" id="fmMain">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="zXbmKaNJqdWZrRDaiTZcLTUwhBYZuRdOd8d5sAplh5Iijv4K3ZSNpRTBKl8WQ2NqZM3v6M2QS0yuuVgNu2YHowCcIYHce/fN3NAXA4BU555BKf4CAsiUnrWURAaPSxnA4+bju4aE1MRrFd5jCBrDNYxSbAPhz5Gw5b3C/1fakohgOpZ71JcdxusZvzb5vHH31XkA9LykgRGNngRVwxBUri2DsEjm2ktRQgygKrcRQUG7V89g8xJyK13wGDqMjMLB2vBZ5AQIxNyUOCm9dWn3/XLib/zLU3zYaFFAh5oLq1GZz8vve2c4SCMhpc1OpM7jE1PSmyAgcC6niXXcn2v7TYqF50av0cP96U+KbZMjeg7vbbEXUf2agSwiHoJ8nSWdMR8bEES1XOejFJm9mIdJcfDSzq3IK3TB3D1u5HVMOE97TlGBHUT77gtIFpZzGCXNrtCv1OIjk8RIJeI6+zzVFz7rquGqrhquKuoZrXWqwNY/tjkDIkufGB/K/NUABiC+b5M9MJbfBsPtW+tD0m35hQfVWPfI1SWoHV6IHHu0J10BQnEOzCxeDhKJ3S0WewC8J/s7nfGREv+zZNmOT8iYvvk48ZnIkoOxbjEQDur56VUbFU9ioM6XeUw8JX2q2su9P1VxsIKIYJgQaU6i5UyS+Q==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['fmMain'];
+if (!theForm) {
+    theForm = document.fmMain;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="19DE7394" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="WDqxdp7dlzLia4YWUo2J2QxjcgVvfCsox2yAGDz6pgBgrY2MebVn1UPWc3nyMkkol3NetG5sQb4J4by4bC9EUCZ2bDsXaxswbVdfDYKYMiXlBFywGNDKcB73bThjB06dfjlZPw9aRqnbbgYKIeBOdYpq6DQ3d23cjtC581CPU3KbYknOfsCrsLwSUQhxbuQVViZ7TjcVp0hZUWLGKz8YalekPNMAzkGriU1dgicvAzPb7FvLRYo6jo4V4wESQ6LjtVgPcg6VYKFDXUdzmb4whBMnw7+jd1WSJbnx8OiWCnZNWsPXEboYwttmBz/vi8EW7dBUKLhuMFY/K1/O68RsJYROCSWofA1zLDin4fJAg9ILgT2g73mlbePSofA7IAoq" />
+</div>
+                
+
+
+	<div class="sg-header">
+		<input name="ctl00$plnMain$hdnTitle" type="hidden" id="plnMain_hdnTitle" value="Interim Progress Report For " />
+		<label id="plnMain_lblTitle" class="sg-header-heading">Interim Progress Report For Tuesday, February 18, 2020</label>
+        
+	</div>
+	<div class="sg-content-grid">
+		<div class="sg-content-grid-container sg-container-content">
+			<label id="plnMain_lblSelectDates">View the Interim Progress Report for&nbsp;</label>
+			<select name="ctl00$plnMain$ddlIPRDates" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$plnMain$ddlIPRDates\&#39;,\&#39;\&#39;)&#39;, 0)" id="plnMain_ddlIPRDates" class="sg-combobox">
+	<option value="9/6/2019 12:00:00 AM">09/06/2019</option>
+	<option value="9/27/2019 12:00:00 AM">09/27/2019</option>
+	<option value="11/8/2019 12:00:00 AM">11/08/2019</option>
+	<option value="12/6/2019 12:00:00 AM">12/06/2019</option>
+	<option value="1/27/2020 12:00:00 AM">01/27/2020</option>
+	<option selected="selected" value="2/18/2020 12:00:00 AM">02/18/2020</option>
+	<option value="4/20/2020 12:00:00 AM">04/20/2020</option>
+	<option value="5/11/2020 12:00:00 AM">05/11/2020</option>
+
+</select>            
+		</div>
+		
+		<div class="sg-content-grid">
+			</td> 
+			<table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_dgIPR" style="border-collapse:collapse;">
+	<tr class="sg-asp-table-header-row">
+		<td>Course</td><td>Description</td><td>Period</td><td>Teacher</td><td>Room</td><td>IPR</td><td>CM1</td><td>CM2</td><td>CIT</td><td>ABS</td><td>TDY</td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>TEC22200B - 1    </td><td>
+							<a href="#" onclick="OpenClassPopUp('4047743'); return false;">Advanced Computer Scien - S2</a>
+						</td><td align="center">1            </td><td><a href="mailto:bunnb@friscoisd.org">BUNN, BRYAN</a></td><td>C136 </td><td align="center">100       </td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">1         </td><td align="center">&nbsp;</td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>CATE27600B - 1    </td><td>
+							<a href="#" onclick="OpenClassPopUp('3648708'); return false;">Mobile App Programming S2@CTEC</a>
+						</td><td align="center">1            </td><td><a href="mailto:PageG@friscoisd.org">Page, Gerald</a></td><td>XC148</td><td align="center">70        </td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>ELA13300B - 5    </td><td>
+							<a href="#" onclick="OpenClassPopUp('4046252'); return false;">AP English Language - S2</a>
+						</td><td align="center">2            </td><td><a href="mailto:gardnersw@friscoisd.org">Gardner, Swapna</a></td><td>C148 </td><td align="center">89        </td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">1         </td><td align="center">&nbsp;</td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>SCI34500B - 2    </td><td>
+							<a href="#" onclick="OpenClassPopUp('4047152'); return false;">AP Physics 2 - S2</a>
+						</td><td align="center">2            </td><td><a href="mailto:MosleyH@friscoisd.org">Mosley, Holley</a></td><td>P3   </td><td align="center">94        </td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>FNA11150B - 1    </td><td>
+							<a href="#" onclick="OpenClassPopUp('4046554'); return false;">PAP Art I - S2</a>
+						</td><td align="center">3            </td><td><a href="mailto:MatulicJ@friscoisd.org">Matulich, Jeb</a></td><td>H105 </td><td align="center">98        </td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">1         </td><td align="center">&nbsp;</td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>SST23300B - 6    </td><td>
+							<a href="#" onclick="OpenClassPopUp('4047495'); return false;">AP US History- S2</a>
+						</td><td align="center">3            </td><td><a href="mailto:hillwh@friscoisd.org">Hill, Whitney</a></td><td>C115 </td><td align="center">83        </td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>FLG23200B - 2    </td><td>
+							<a href="#" onclick="OpenClassPopUp('4046522'); return false;">PAP Spanish III - S2</a>
+						</td><td align="center">4            </td><td><a href="mailto:TaquinoA@friscoisd.org">TAQUINO, ASHLI</a></td><td>C210 </td><td align="center">98        </td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">2         </td><td align="center">&nbsp;</td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>MTH45300B - 5    </td><td>
+							<a href="#" onclick="OpenClassPopUp('4046973'); return false;">AP Calculus AB - S2</a>
+						</td><td align="center">4            </td><td><a href="mailto:schallak@friscoisd.org">Schalla, Kathryn</a></td><td>C233 </td><td align="center">98        </td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
+	</tr>
+</table>
+		</div>
+		<input name="ctl00$plnMain$hdnMessage" type="hidden" id="plnMain_hdnMessage" value="Interim Progress information could not be found for this date." />
+		<input name="ctl00$plnMain$hdnMessage1" type="hidden" id="plnMain_hdnMessage1" value="This student does not have any Interim Progress Reports for this school year." />
+		<input name="ctl00$plnMain$hdnTitleNoRecord" type="hidden" id="plnMain_hdnTitleNoRecord" value="Interim Progress Report" />
+		<br>
+		<div id="plnMain_tblComments" class="sg-asp-table-group">
+			<div class="sg-header-group">
+				<label id="plnMain_lblCommonLegend">Comment Legend</label>
+			</div>
+			
+			<span id="plnMain_lblNoComments">There are no comments entered for this student.</span>
+		</div>
+	</div>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            // Build the jQuery UI buttons
+            $('.sg-buttonset').buttonset();
+            $('.sg-button').button();
+            window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height()); // set the init size
+            // Increase length of smaller content windows to reduce cutoffs in dropdowns. 
+            var iframeHeight = window.parent.$('.sg-legacy-iframe').height(); 
+            if (iframeHeight < 450)
+            { window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height() + 200); }
+           
+        })
+    </script>
+</body>
+</html>
