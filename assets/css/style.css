@@ -636,8 +636,14 @@ section {
 
 .details .content h3 {
   font-weight: 700;
-  font-size: 32px;
-  color: #47536e;
+  font-size: 34px;
+  color: #2C2C2C;
+}
+
+.details .content p {
+  font-size: 22px;
+  font-weight: 300;
+  color: #2C2C2C;
 }
 
 .details .content ul {
@@ -646,6 +652,7 @@ section {
 }
 
 .details .content ul li {
+  font-size: 20px;
   padding-bottom: 10px;
 }
 
