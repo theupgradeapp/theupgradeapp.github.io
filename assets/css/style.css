@@ -2,8 +2,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "IBM Plex Sans", sans-serif;
-  
+  font-family: "Nunito Sans", sans-serif;
 }
 
 a {
@@ -16,7 +15,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -145,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 12px 15px;
   transition: 0.3s;
   font-size: 14px;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
@@ -372,7 +371,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   line-height: 74px;
   color: #FFFFFF;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 #hero h2 {
@@ -385,7 +384,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .download-btn {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 500;
   font-size: 25px;
   display: inline-block;
@@ -427,6 +426,13 @@ h1, h2, h3, h4, h5, h6 {
   }
   #hero .hero-img img {
     width: 60%;
+  }
+}
+
+@media (max-width: 1200px) {
+  #hero h1 {
+    font-size: 70px;
+    line-height: 70px;
   }
 }
 
@@ -480,7 +486,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 0;
   color: #2C2C2C;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -832,7 +838,7 @@ section {
   font-size: 46px;
   color: #42e077;
   font-weight: 400;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   margin-bottom: 25px;
 }
 
@@ -881,7 +887,7 @@ section {
   transition: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   transition: 0.3s;
 }
 
@@ -949,7 +955,7 @@ section {
 .faq .accordion-list a {
   display: block;
   position: relative;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -1026,7 +1032,7 @@ section {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .contact .info p {
@@ -1088,7 +1094,7 @@ section {
 }
 
 .contact .php-email-form label {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   margin-bottom: 5px;
   color: #8a8c95;
 }
@@ -1241,7 +1247,7 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   color: #8a8c95;
 }
 
