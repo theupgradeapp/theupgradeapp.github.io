@@ -1,0 +1,63 @@
+{
+	"bellSchedules": [
+		{
+			"name": "High School Schedule",
+			"bellPeriods": [
+				{
+					"name": "First Period",
+					"startHour": 9,
+					"startMinute": 0,
+					"endHour": 10,
+					"endMinute": 30,
+					"abbreviation": "1st",
+					"notify": true
+				},
+				{
+					"name": "Second Period",
+					"startHour": 19,
+					"startMinute": 35,
+					"endHour": 12,
+					"endMinute": 5,
+					"abbreviation": "2nd",
+					"notify": true
+				},
+				{
+					"name": "Advisory",
+					"startHour": 12,
+					"startMinute": 10,
+					"endHour": 12,
+					"endMinute": 35,
+					"abbreviation": "Adv",
+					"notify": true
+				},
+				{
+					"name": "Third Period",
+					"startHour": 12,
+					"startMinute": 40,
+					"endHour": 14,
+					"endMinute": 40,
+					"abbreviation": "3rd",
+					"notify": true
+				},
+				{
+					"name": "Lunch",
+					"startHour": 12,
+					"startMinute": 40,
+					"endHour": 13,
+					"endMinute": 10,
+					"abbreviation": "Lun",
+					"notify": true
+				},
+				{
+					"name": "Fourth Period",
+					"startHour": 14,
+					"startMinute": 45,
+					"endHour": 16,
+					"endMinute": 15,
+					"abbreviation": "4th",
+					"notify": true
+				}
+			]			
+		}
+	]
+}
