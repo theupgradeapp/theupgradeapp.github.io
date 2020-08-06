@@ -1,240 +1,217 @@
 
 
 <!DOCTYPE html>
-<html><head><title>
+<html>
+<head><title>
 	HomeAccess
 </title>
+    
+    <link href="/HomeAccess/Stylesheets/Themes/custom-theme/jquery?v=khU3GP_ixo8tMiLwXJEqkRywEE1c7SBpfpbj4KSDyXA1" rel="Stylesheet" type="text/css" /> 
 
-	<link href="/HomeAccess/Stylesheets/Themes/custom-theme/jquery?v=khU3GP_ixo8tMiLwXJEqkRywEE1c7SBpfpbj4KSDyXA1" rel="Stylesheet" type="text/css">
+    
+    <link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=CrossSite" />
+    <link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=ComboBox" />
+    <link rel="Stylesheet" href="../../Stylesheets/Common/font-awesome.css" />
+    
+    
+    <link rel="Stylesheet" href="../../Stylesheets/Site.css" />
+    <link rel="stylesheet" href="../../Stylesheets/Frame/Frame.css" /> 
+    <link rel="SHORTCUT ICON" href="../../Media/Themes/Base/Common/favicon.ico"/>
+    <style>
+        .sg-asp-table-header-row,
+        .ui-jqgrid-view .ui-jqgrid-hdiv, 
+        .ui-jqgrid tr.ui-jqgrid-labels th  {
+	        background-color: #00427c;
+            color: #FFFFFF;
+        }
+    </style>
 
+    <script src="/HomeAccess/Scripts/libs/jquery?v=kFkgd6hNofX_b_JGNSXAqVYLW6XzxJEd8j1YdcwKx3I1" type="text/javascript"></script>   
+    <script src="../../Scripts/libs/modernizr-2.8.3.js" type="text/javascript"></script>   
+    <script src="../../Scripts/Trirand/ui.multiselect.js" type="text/javascript" ></script>
+    <script src="../../Scripts/Trirand/i18n/grid.locale-en.js" type="text/javascript"></script>
+    <script src="../../Scripts/Trirand/jquery.jqGrid.js" type="text/javascript"></script>
+    <script src="../../Scripts/libs/json2.js" type="text/javascript"></script>
+    <script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=SungardCommon" type="text/javascript"></script>    
+    <script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=Combobox" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            parseForComboBoxes();
+        });
+    </script>    
+    
 
-	<link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=CrossSite">
-	<link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=ComboBox">
-	<link rel="Stylesheet" href="../../Stylesheets/Common/font-awesome.css">
-
-
-	<link rel="Stylesheet" href="../../Stylesheets/Site.css">
-	<link rel="stylesheet" href="../../Stylesheets/Frame/Frame.css">
-	<link rel="SHORTCUT ICON" href="../../Media/Themes/Base/Common/favicon.ico">
-	<style>
-		.sg-asp-table-header-row,
-		.ui-jqgrid-view .ui-jqgrid-hdiv,
-		.ui-jqgrid tr.ui-jqgrid-labels th  {
-			background-color: #00427c;
-			color: #FFFFFF;
-		}
-	</style>
-
-	<script src="/HomeAccess/Scripts/libs/jquery?v=kFkgd6hNofX_b_JGNSXAqVYLW6XzxJEd8j1YdcwKx3I1" type="text/javascript"></script>
-	<script src="../../Scripts/libs/modernizr-2.8.3.js" type="text/javascript"></script>
-	<script src="../../Scripts/Trirand/ui.multiselect.js" type="text/javascript"></script>
-	<script src="../../Scripts/Trirand/i18n/grid.locale-en.js" type="text/javascript"></script>
-	<script src="../../Scripts/Trirand/jquery.jqGrid.js" type="text/javascript"></script>
-	<script src="../../Scripts/libs/json2.js" type="text/javascript"></script>
-	<script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=SungardCommon" type="text/javascript"></script>
-	<script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=Combobox" type="text/javascript"></script>
-	<script type="text/javascript">
-		$(function () {
-			parseForComboBoxes();
-		});
-	</script>
-
-
-	<script type="text/javascript">
-		$(SunGard.Common.Init('/HomeAccess/'));
-	</script>
-
-
-
-
-	<script type="text/javascript" src="../Common/querystring.js"></script>
+    <script type="text/javascript">
+        $(SunGard.Common.Init('/HomeAccess/'));
+    </script>
+    
+    
+    
+    
+    <script type="text/javascript" src="../Common/querystring.js"></script>
 	<script type="text/javascript" src="ClassNotes.js"></script>
 	<script type="text/javascript">
-		$(function() {
-			$('#ddlMarkPeriods').change(ddlMarkPeriods_onchange);
-		});
-		function ddlMarkPeriods_onchange()
-		{
-			var option = $("#ddlMarkPeriods").options.item($("#ddlMarkPeriods").selectedIndex);
-			var qs = parse_querystring();
-			qs.set_item("marking_period", option.value.replace(" ",""));
-			window.location.search = construct_querystring(qs);
-		}
-		function OpenClassPopUp(sectionKey) {
-			window.open("ClassPopUp.aspx?section_key=" + sectionKey, null, "status=no,menubar=no,toolbar=no,scrollbars=yes,width=800,height=450");
-			return false;
-		}
+	    $(function() {
+	        $('#ddlMarkPeriods').change(ddlMarkPeriods_onchange);
+	    });
+	    function ddlMarkPeriods_onchange()
+	    {
+	        var option = $("#ddlMarkPeriods").options.item($("#ddlMarkPeriods").selectedIndex);
+	        var qs = parse_querystring();
+	        qs.set_item("marking_period", option.value.replace(" ",""));
+	        window.location.search = construct_querystring(qs);
+	    }
+	    function OpenClassPopUp(sectionKey) {
+	        window.open("ClassPopUp.aspx?section_key=" + sectionKey, null, "status=no,menubar=no,toolbar=no,scrollbars=yes,width=800,height=450");
+	        return false;
+	    }
 	</script>
-
+	 
 </head>
 <body>
-
-<div id="MainContent" class="sg-main-content">
-	<div class="sg-hac-content">
-		<form method="post" action="./Classes.aspx" id="fmMain">
-			<div class="aspNetHidden">
-				<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="QDPn/sfmzQdhn5DnlghZfj0ObhnaUIVuC8kjOS3tSOKhUp0KH8RexYfdzagARBfAB/6vgHrhQ6fUOGAHxTpp0rjmUiEFELiz8i3oo6XE4hg=">
-			</div>
-
-			<div class="aspNetHidden">
-
-				<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A4BFC39B">
-			</div>
-
-
-
-			<div id="divLocker" class="sg-right">
-				<table><tbody><tr>
-					<td width="25%">
-						<label id="plnMain_lblStudentID">ID: </label>
-						<span id="plnMain_lblStudentIDValue">226216</span>
-					</td>
-					<td width="25%">
-
-
-					</td>
-					<td width="25%">
-
-
-					</td>
-				</tr></tbody></table>
-			</div>
-
-
-			<div class="sg-header">
-				<div id="plnMain_pageTitle" class="sg-header-heading">2019 - 2020 Schedule</div>
-			</div>
-
-			<div class="sg-content-grid">
-
-
-				<table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_dgSchedule" style="border-collapse:collapse;">
-					<tbody><tr class="sg-asp-table-header-row">
-						<td>Course</td><td>Description</td><td>Periods</td><td>Teacher</td><td>Room</td><td>Days</td><td>Marking Periods</td><td>Building</td><td>Status</td>
-					</tr><tr class="sg-asp-table-data-row">
-					<td>CATE27600A - 1    </td><td>
-					<a href="#" onclick="OpenClassPopUp('3648707'); return false;">Mobile App Programming</a>
-				</td><td>1            </td><td><a href="mailto:audrey.oliver@friscoisd.org                                                                                                                                                                                                                                            ">Oliver, Audrey             </a></td><td>XC148     </td><td>A</td><td>Q1, Q2</td><td>CTE                                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>TEC22200A - 1     </td><td>
-					<a href="#" onclick="OpenClassPopUp('4047742'); return false;">Advanced Computer Science</a>
-				</td><td>1            </td><td><a href="mailto:jan.ross@friscoisd.org                                                                                                                                                                                                                                            ">Ross, Jan              </a></td><td>C136      </td><td>B</td><td>Q1, Q2</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>CATE27600B - 1    </td><td>
-					<a href="#" onclick="OpenClassPopUp('3648708'); return false;">Mobile App Programming</a>
-				</td><td>1            </td><td><a href="mailto:audrey.oliver@friscoisd.org                                                                                                                                                                                                                                            ">Oliver, Audrey             </a></td><td>XC148     </td><td>A</td><td>Q3, Q4</td><td>CTE                                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>TEC22200B - 1     </td><td>
-					<a href="#" onclick="OpenClassPopUp('4047743'); return false;">Advanced Computer Science</a>
-				</td><td>1            </td><td><a href="mailto:jan.ross@friscoisd.org                                                                                                                                                                                                                                            ">Ross, Jan              </a></td><td>C136      </td><td>B</td><td>Q3, Q4</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>ELA13300A - 5     </td><td>
-					<a href="#" onclick="OpenClassPopUp('4046251'); return false;">English Composition</a>
-				</td><td>2            </td><td><a href="mailto:james.wallace@friscoisd.org                                                                                                                                                                                                                                        ">Wallace, James          </a></td><td>C148      </td><td>A</td><td>Q1, Q2</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>SCI34500A - 2     </td><td>
-					<a href="#" onclick="OpenClassPopUp('4047151'); return false;">3D Modeling</a>
-				</td><td>2            </td><td><a href="mailto:michelle.james@friscoisd.org                                                                                                                                                                                                                                          ">James, Michelle           </a></td><td>P3        </td><td>B</td><td>Q1, Q2</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>ELA13300B - 5     </td><td>
-					<a href="#" onclick="OpenClassPopUp('4046252'); return false;">English Composition</a>
-				</td><td>2            </td><td><a href="mailto:james.wallace@friscoisd.org                                                                                                                                                                                                                                        ">Wallace, James          </a></td><td>C148      </td><td>A</td><td>Q3, Q4</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>SCI34500B - 2     </td><td>
-					<a href="#" onclick="OpenClassPopUp('4047152'); return false;">3D Modeling</a>
-				</td><td>2            </td><td><a href="mailto:michelle.james@friscoisd.org                                                                                                                                                                                                                                          ">James, Michelle           </a></td><td>P3        </td><td>B</td><td>Q3, Q4</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>FNA11150A - 1     </td><td>
-					<a href="#" onclick="OpenClassPopUp('4046553'); return false;">Professional Communications</a>
-				</td><td>3            </td><td><a href="mailto:benjamin.gibson@friscoisd.org                                                                                                                                                                                                                                         ">Gibson, Benjamin            </a></td><td>H105      </td><td>A</td><td>Q1, Q2</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>SST23300A - 6     </td><td>
-					<a href="#" onclick="OpenClassPopUp('4047494'); return false;">United States History</a>
-				</td><td>3            </td><td><a href="mailto:oliver.wilson@friscoisd.org                                                                                                                                                                                                                                           ">Wilson, Oliver            </a></td><td>C115      </td><td>B</td><td>Q1, Q2</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>FNA11150B - 1     </td><td>
-					<a href="#" onclick="OpenClassPopUp('4046554'); return false;">Professional Communications</a>
-				</td><td>3            </td><td><a href="mailto:benjamin.gibson@friscoisd.org                                                                                                                                                                                                                                         ">Gibson, Benjamin            </a></td><td>H105      </td><td>A</td><td>Q3, Q4</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>SST23300B - 6     </td><td>
-					<a href="#" onclick="OpenClassPopUp('4047495'); return false;">United States History</a>
-				</td><td>3            </td><td><a href="mailto:oliver.wilson@friscoisd.org                                                                                                                                                                                                                                           ">Wilson, Oliver            </a></td><td>C115      </td><td>B</td><td>Q3, Q4</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>FLG23200A - 2     </td><td>
-					<a href="#" onclick="OpenClassPopUp('4046521'); return false;">Spanish Language</a>
-				</td><td>4            </td><td><a href="mailto:zoe.parsons@friscoisd.org                                                                                                                                                                                                                                         ">Parsons, Zoe           </a></td><td>C210      </td><td>A</td><td>Q1, Q2</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>MTH45300A - 5     </td><td>
-					<a href="#" onclick="OpenClassPopUp('4046972'); return false;">Calculus AB</a>
-				</td><td>4            </td><td><a href="mailto:edward.dowd@friscoisd.org                                                                                                                                                                                                                                         ">Dowd, Edward         </a></td><td>C233      </td><td>B</td><td>Q1, Q2</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>FLG23200B - 2     </td><td>
-					<a href="#" onclick="OpenClassPopUp('4046522'); return false;">Spanish Language</a>
-				</td><td>4            </td><td><a href="mailto:zoe.parsons@friscoisd.org                                                                                                                                                                                                                                         ">Parsons, Zoe           </a></td><td>C210      </td><td>A</td><td>Q3, Q4</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>MTH45300B - 5     </td><td>
-					<a href="#" onclick="OpenClassPopUp('4046973'); return false;">Calculus AB</a>
-				</td><td>4            </td><td><a href="mailto:edward.dowd@friscoisd.org                                                                                                                                                                                                                                         ">Dowd, Edward         </a></td><td>C233      </td><td>B</td><td>Q3, Q4</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
-				</tr>
-				</tbody></table>
-
-				<div class="sg-header">
-
-				</div>
-
-
-				<div>
-
-				</div>
-
-				<div class="sg-header sg-20px-margin-top">
-					<span id="plnMain_lblCourseRequests" class="sg-header-heading">2020 - 2021 Course Requests</span>
-				</div>
-				<table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_dgCourseRequests" style="border-collapse:collapse;">
-					<tbody><tr class="sg-asp-table-header-row">
-						<td>Course</td><td>Description</td><td>Request Type</td>
-					</tr><tr class="sg-asp-table-data-row">
-					<td>COL14402</td><td>Col Engl 1301 Eng4 4Pd S1</td><td>Regular Request</td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>COL14405</td><td>Col Engl 1302 Eng4 4Pd S2</td><td>Regular Request</td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>ELC14115Y</td><td>ISM 1 YR</td><td>Regular Request</td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>FNA12200Y</td><td>PAP Art 2 YR</td><td>Regular Request</td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>MTH45305Y</td><td>AP Calculus BC YR</td><td>Regular Request</td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>REL99013Y</td><td>Rel 4A OR 4B YR</td><td>Regular Request</td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>SCI35500Y</td><td>AP Physics C YR</td><td>Regular Request</td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>SCI43300Y</td><td>AP Environmental Science YR</td><td>Regular Request</td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>SST34300</td><td>AP Government</td><td>Regular Request</td>
-				</tr><tr class="sg-asp-table-data-row">
-					<td>SST34310</td><td>AP Economics</td><td>Regular Request</td>
-				</tr>
-				</tbody></table>
-				<div>
-
-				</div>
-			</div>
-
-		</form>
-	</div>
+    
+    <div id='MainContent' class='sg-main-content'>
+        <div class='sg-hac-content'>
+            <form method="post" action="./Classes.aspx" id="fmMain">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="YN+0UvPwsaXT5UOOwVpcW7KxQbzXaghtVKfG6DwsIdaUcqUd2WEa//AqsZCuLYpbmU/yswD69U7bhC+hGgSSwCo2cUlBN2LZ7PUgbGhAnZs=" />
 </div>
-<script>
-	$(function () {
-		// Build the jQuery UI buttons
-		$('.sg-buttonset').buttonset();
-		$('.sg-button').button();
-		window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height()); // set the init size
-		// Increase length of smaller content windows to reduce cutoffs in dropdowns.
-		var iframeHeight = window.parent.$('.sg-legacy-iframe').height();
-		if (iframeHeight < 450)
-		{ window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height() + 200); }
 
-	})
-</script>
+<div class="aspNetHidden">
 
-</body></html>
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A4BFC39B" />
+</div>
+                
+
+	 
+	<div id="divLocker" class="sg-right"  >
+	      <table><tr>
+		  <td width="25%">
+		  <label id="plnMain_lblStudentID">ID: </label>
+		  <span id="plnMain_lblStudentIDValue">226216</span>
+		  </td>
+		  <td width="25%">
+		  <label id="plnMain_lblLockerNumber">Locker: </label>
+		  <span id="plnMain_lblLockerNumberValue">2008</span>
+		  </td>
+		  <td width="25%">
+		  <label id="plnMain_lblCombination">Combination: </label>
+		  <span id="plnMain_lblCombinationValue">44-14-38</span>
+		  </td>
+		  </tr></table>
+	</div>
+	 
+	 
+    <div class="sg-header">
+        <div id="plnMain_pageTitle" class="sg-header-heading">2019 - 2020 Schedule</div>
+    </div>
+	 
+    <div class="sg-content-grid">
+        
+		
+<table class="sg-asp-table" cellspacing="0" rules="all" border="1" id="plnMain_dgSchedule" style="border-collapse:collapse;">
+	<tr class="sg-asp-table-header-row">
+		<td>Course</td><td>Description</td><td>Periods</td><td>Teacher</td><td>Room</td><td>Days</td><td>Marking Periods</td><td>Building</td><td>Status</td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>CATE27600A - 1    </td><td>
+					    <a href="#" onclick="OpenClassPopUp('3648707'); return false;">Mobile App Programming S1@CTEC</a>
+				    </td><td>1            </td><td><a href="mailto:PageG@friscoisd.org                                                                                                                                                                                                                                            ">Page, Gerald             </a></td><td>XC148     </td><td>A</td><td>Q1, Q2</td><td>CTE                                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>TEC22200A - 1     </td><td>
+					    <a href="#" onclick="OpenClassPopUp('4047742'); return false;">Advanced Computer Scien - S1</a>
+				    </td><td>1            </td><td><a href="mailto:bunnb@friscoisd.org                                                                                                                                                                                                                                            ">BUNN, BRYAN              </a></td><td>C136      </td><td>B</td><td>Q1, Q2</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>CATE27600B - 1    </td><td>
+					    <a href="#" onclick="OpenClassPopUp('3648708'); return false;">Mobile App Programming S2@CTEC</a>
+				    </td><td>1            </td><td><a href="mailto:PageG@friscoisd.org                                                                                                                                                                                                                                            ">Page, Gerald             </a></td><td>XC148     </td><td>A</td><td>Q3, Q4</td><td>CTE                                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>TEC22200B - 1     </td><td>
+					    <a href="#" onclick="OpenClassPopUp('4047743'); return false;">Advanced Computer Scien - S2</a>
+				    </td><td>1            </td><td><a href="mailto:bunnb@friscoisd.org                                                                                                                                                                                                                                            ">BUNN, BRYAN              </a></td><td>C136      </td><td>B</td><td>Q3, Q4</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>ELA13300A - 5     </td><td>
+					    <a href="#" onclick="OpenClassPopUp('4046251'); return false;">AP English Language - S1</a>
+				    </td><td>2            </td><td><a href="mailto:gardnersw@friscoisd.org                                                                                                                                                                                                                                        ">Gardner, Swapna          </a></td><td>C148      </td><td>A</td><td>Q1, Q2</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>SCI34500A - 2     </td><td>
+					    <a href="#" onclick="OpenClassPopUp('4047151'); return false;">AP Physics 2 - S1</a>
+				    </td><td>2            </td><td><a href="mailto:MosleyH@friscoisd.org                                                                                                                                                                                                                                          ">Mosley, Holley           </a></td><td>P3        </td><td>B</td><td>Q1, Q2</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>ELA13300B - 5     </td><td>
+					    <a href="#" onclick="OpenClassPopUp('4046252'); return false;">AP English Language - S2</a>
+				    </td><td>2            </td><td><a href="mailto:gardnersw@friscoisd.org                                                                                                                                                                                                                                        ">Gardner, Swapna          </a></td><td>C148      </td><td>A</td><td>Q3, Q4</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>SCI34500B - 2     </td><td>
+					    <a href="#" onclick="OpenClassPopUp('4047152'); return false;">AP Physics 2 - S2</a>
+				    </td><td>2            </td><td><a href="mailto:MosleyH@friscoisd.org                                                                                                                                                                                                                                          ">Mosley, Holley           </a></td><td>P3        </td><td>B</td><td>Q3, Q4</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>FNA11150A - 1     </td><td>
+					    <a href="#" onclick="OpenClassPopUp('4046553'); return false;">PAP Art I S1</a>
+				    </td><td>3            </td><td><a href="mailto:MatulicJ@friscoisd.org                                                                                                                                                                                                                                         ">Matulich, Jeb            </a></td><td>H105      </td><td>A</td><td>Q1, Q2</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>SST23300A - 6     </td><td>
+					    <a href="#" onclick="OpenClassPopUp('4047494'); return false;">AP US History- S1</a>
+				    </td><td>3            </td><td><a href="mailto:hillwh@friscoisd.org                                                                                                                                                                                                                                           ">Hill, Whitney            </a></td><td>C115      </td><td>B</td><td>Q1, Q2</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>FNA11150B - 1     </td><td>
+					    <a href="#" onclick="OpenClassPopUp('4046554'); return false;">PAP Art I - S2</a>
+				    </td><td>3            </td><td><a href="mailto:MatulicJ@friscoisd.org                                                                                                                                                                                                                                         ">Matulich, Jeb            </a></td><td>H105      </td><td>A</td><td>Q3, Q4</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>SST23300B - 6     </td><td>
+					    <a href="#" onclick="OpenClassPopUp('4047495'); return false;">AP US History- S2</a>
+				    </td><td>3            </td><td><a href="mailto:hillwh@friscoisd.org                                                                                                                                                                                                                                           ">Hill, Whitney            </a></td><td>C115      </td><td>B</td><td>Q3, Q4</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>FLG23200A - 2     </td><td>
+					    <a href="#" onclick="OpenClassPopUp('4046521'); return false;">PAP Spanish III - S1</a>
+				    </td><td>4            </td><td><a href="mailto:TaquinoA@friscoisd.org                                                                                                                                                                                                                                         ">TAQUINO, ASHLI           </a></td><td>C210      </td><td>A</td><td>Q1, Q2</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>MTH45300A - 5     </td><td>
+					    <a href="#" onclick="OpenClassPopUp('4046972'); return false;">AP Calculus AB - S1</a>
+				    </td><td>4            </td><td><a href="mailto:schallak@friscoisd.org                                                                                                                                                                                                                                         ">Schalla, Kathryn         </a></td><td>C233      </td><td>B</td><td>Q1, Q2</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>FLG23200B - 2     </td><td>
+					    <a href="#" onclick="OpenClassPopUp('4046522'); return false;">PAP Spanish III - S2</a>
+				    </td><td>4            </td><td><a href="mailto:TaquinoA@friscoisd.org                                                                                                                                                                                                                                         ">TAQUINO, ASHLI           </a></td><td>C210      </td><td>A</td><td>Q3, Q4</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr><tr class="sg-asp-table-data-row">
+		<td>MTH45300B - 5     </td><td>
+					    <a href="#" onclick="OpenClassPopUp('4046973'); return false;">AP Calculus AB - S2</a>
+				    </td><td>4            </td><td><a href="mailto:schallak@friscoisd.org                                                                                                                                                                                                                                         ">Schalla, Kathryn         </a></td><td>C233      </td><td>B</td><td>Q3, Q4</td><td>Liberty High School                                                                                                                                                                                                                                            </td><td>Active    </td>
+	</tr>
+</table>
+
+        <div class="sg-header">
+            
+        </div>
+	    
+
+	    <div>
+	        
+	    </div>
+
+        <div class="sg-header sg-20px-margin-top">
+	        
+        </div>
+	    
+	    <div>
+	        
+	    </div>
+    </div>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            // Build the jQuery UI buttons
+            $('.sg-buttonset').buttonset();
+            $('.sg-button').button();
+            window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height()); // set the init size
+            // Increase length of smaller content windows to reduce cutoffs in dropdowns. 
+            var iframeHeight = window.parent.$('.sg-legacy-iframe').height(); 
+            if (iframeHeight < 450)
+            { window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height() + 200); }
+           
+        })
+    </script>
+</body>
+</html>
