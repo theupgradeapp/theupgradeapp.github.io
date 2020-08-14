@@ -17,47 +17,47 @@
 					"startHour": 10,
 					"startMinute": 35,
 					"endHour": 12,
-					"endMinute": 5,
+					"endMinute": 10,
 					"abbreviation": "2nd",
-					"notify": true
-				},
-				{
-					"name": "Advisory",
-					"startHour": 12,
-					"startMinute": 10,
-					"endHour": 12,
-					"endMinute": 35,
-					"abbreviation": "Adv",
-					"notify": true
-				},
-				{
-					"name": "Third Period",
-					"startHour": 12,
-					"startMinute": 40,
-					"endHour": 14,
-					"endMinute": 40,
-					"abbreviation": "3rd",
 					"notify": true
 				},
 				{
 					"name": "Lunch",
 					"startHour": 12,
-					"startMinute": 40,
-					"endHour": 13,
-					"endMinute": 10,
+					"startMinute": 15,
+					"endHour": 12,
+					"endMinute": 45,
 					"abbreviation": "Lun",
+					"notify": true
+				},
+				{
+					"name": "Advisory",
+					"startHour": 12,
+					"startMinute": 45,
+					"endHour": 13,
+					"endMinute": 15,
+					"abbreviation": "Adv",
+					"notify": true
+				},
+				{
+					"name": "Third Period",
+					"startHour": 13,
+					"startMinute": 20,
+					"endHour": 14,
+					"endMinute": 50,
+					"abbreviation": "3rd",
 					"notify": true
 				},
 				{
 					"name": "Fourth Period",
 					"startHour": 14,
-					"startMinute": 45,
+					"startMinute": 55,
 					"endHour": 16,
-					"endMinute": 15,
+					"endMinute": 25,
 					"abbreviation": "4th",
 					"notify": true
 				}
 			]			
-		}
+		},
 	]
 }
