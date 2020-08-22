@@ -1,105 +1,96 @@
 
+
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <meta charset="utf-8" />
-
-        
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-            <title>Error</title>
-        
-
-        <!-- 3rd party CSS our globals override -->
-<link href="/HomeAccess/Stylesheets/Themes/custom-theme/jquery?v=khU3GP_ixo8tMiLwXJEqkRywEE1c7SBpfpbj4KSDyXA1" rel="stylesheet"/>
-<link href="/HomeAccess/Stylesheets/SunGard/sungard-font-awesome.css" rel="stylesheet"/>
-
-        <link href="/HomeAccess/Stylesheets/Trirand/ui.jqgrid.css" rel="stylesheet"/>
+<head><title>
+	HomeAccess
+</title>
+    
+    <link href="/HomeAccess/Stylesheets/Themes/custom-theme/jquery?v=khU3GP_ixo8tMiLwXJEqkRywEE1c7SBpfpbj4KSDyXA1" rel="Stylesheet" type="text/css" /> 
 
     
-        <!-- Our globals -->
-        <link href="/HomeAccess/eSchoolPLUSResource/GetEmbeddedStyle?file=CrossSite" rel="stylesheet"/>
-
-        <link href="/HomeAccess/Stylesheets/Site.css" rel="stylesheet"/>
-
-        <link rel="SHORTCUT ICON" href="/HomeAccess/Media/Themes/Base/Common/favicon.ico"/>
-
-        <!-- Our shared -->
-        <link href="/HomeAccess/eSchoolPLUSResource/GetEmbeddedStyle?file=ComboBox" rel="stylesheet"/>
-
-        <link href="/HomeAccess/Stylesheets/Common/Navigation.css" rel="stylesheet"/>
-
-        <link href="/HomeAccess/Stylesheets/Common/font-awesome.css" rel="stylesheet"/>
-
+    <link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=CrossSite" />
+    <link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=ComboBox" />
+    <link rel="Stylesheet" href="../../Stylesheets/Common/font-awesome.css" />
     
-        <!-- JS -->
-        
+    
+    <link rel="Stylesheet" href="../../Stylesheets/Site.css" />
+    <link rel="stylesheet" href="../../Stylesheets/Frame/Frame.css" /> 
+    <link rel="SHORTCUT ICON" href="../../Media/Themes/Base/Common/favicon.ico"/>
+    <style>
+        .sg-asp-table-header-row,
+        .ui-jqgrid-view .ui-jqgrid-hdiv, 
+        .ui-jqgrid tr.ui-jqgrid-labels th  {
+	        background-color: #184366  ;
+            color: white   ;
+        }
+    </style>
 
-        <script src="/HomeAccess/Scripts/libs/modernizr-2.8.3.js"></script>
+    <script src="/HomeAccess/Scripts/libs/jquery?v=kFkgd6hNofX_b_JGNSXAqVYLW6XzxJEd8j1YdcwKx3I1" type="text/javascript"></script>   
+    <script src="../../Scripts/libs/modernizr-2.8.3.js" type="text/javascript"></script>   
+    <script src="../../Scripts/Trirand/ui.multiselect.js" type="text/javascript" ></script>
+    <script src="../../Scripts/Trirand/i18n/grid.locale-en.js" type="text/javascript"></script>
+    <script src="../../Scripts/Trirand/jquery.jqGrid.js" type="text/javascript"></script>
+    <script src="../../Scripts/libs/json2.js" type="text/javascript"></script>
+    <script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=SungardCommon" type="text/javascript"></script>    
+    <script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=Combobox" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            parseForComboBoxes();
+        });
+    </script>    
+    
 
-        <script src="/HomeAccess/Scripts/Common/BrowserTest.js"></script>
-
-        <script type="text/javascript">
-            if (!BrowserTest()) {
-                document.location = '/HomeAccess/' + 'BrowserReject'; // Done because browsers that vail won't support jQuery
-            }
-        </script>
-            
-        <script src="/HomeAccess/Scripts/libs/jquery?v=kFkgd6hNofX_b_JGNSXAqVYLW6XzxJEd8j1YdcwKx3I1"></script>
-
-
-        <script src="/HomeAccess/Scripts/Trirand/ui.multiselect.js"></script>
-
-        <script src="/HomeAccess/Scripts/Trirand/i18n/grid.locale-en.js"></script>
-
-        <script src="/HomeAccess/Scripts/Trirand/jquery.jqGrid.js"></script>
-
-
-
-        <script src="/HomeAccess/eSchoolPLUSResource/GetEmbeddedScript?file=SungardCommon" type="text/javascript"></script>
-        <script src="/HomeAccess/eSchoolPLUSResource/GetEmbeddedScript?file=Combobox" type="text/javascript"></script>
-
-        <script src="/HomeAccess/Scripts/Common/HAC.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(function () {
-                parseForComboBoxes();
-
-                SunGard.Hac.Area('');
-                SunGard.Hac.Controller('Error');
-                SunGard.Hac.Action('Index');
-
-                SunGard.Common.Init('/HomeAccess/');
-                SunGard.Hac.Init('/HomeAccess/');
-            });
-        </script>
-
-
-        <!-- This should be at the bottom of this section -->
-        
+    <script type="text/javascript">
+        $(SunGard.Common.Init('/HomeAccess/'));
+    </script>
+    
+    
     </head>
-    <!-- add webkit-overflow to fix scrolling on IOS Devices-->
-    <body style="-webkit-overflow-scrolling: touch;">
-        
-
-
-
-<table border="0" cellpadding="0" cellspacing="0" align="center">
-    <tr>
-        <td>
-An error occurred while processing your request.            <br /> <br />
-
-        </td>
-    </tr>
-</table>
-
-        
-        <script>
-            $(function() {
-                // Build the jQuery UI buttons
-                $('.sg-buttonset').buttonset();
-                $('.sg-button').button();
-            })
-        </script>
-    </body>
+<body>
     
+    <div id='MainContent' class='sg-main-content'>
+        <div class='sg-hac-content'>
+            <form method="post" action="./Transcript.aspx" id="fmMain">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="rmuibB+Gf2kMXo+KPySiuffKDZKk/ophiUv/hVLyWLy5qDZbiYnqO8QppVAD0V+HDLX2n/PcwSqn2u2udKL/wMIZWJ55FmakIFRHPlhitYuKSSazxI04UV3BEkpp7t1F2NUdKSWRO7dExQK/FntkAXqDrxjs7UCNiKHa4VG1N5cATIXph8BiKRF9ghE1SVPY" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="ECC4EA3A" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Bv73PjsDifzejo4uOazRjDR+wnKBkvlJQ13Z7ugzDofbaiUxyg1zOvgYK1Aecr/fPFx+j2IjuMrhtXB4TysdT3b9FkkfnxnGs9+t/c2RESNNlemiNLDKv5laDPOfb5RG" />
+</div>
+                
+
+
+	<div class="sg-header">
+        <input name="ctl00$plnMain$hdnTitle" type="hidden" id="plnMain_hdnTitle" />
+    </div>
+    <div class="sg-content-grid">
+        <div class="sg-content-grid-container sg-container-content">
+	        
+            
+        </div>
+	    <span id="plnMain_lblMessage">A transcript has not been generated for this student.</span>
+	    
+    </div>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            // Build the jQuery UI buttons
+            $('.sg-buttonset').buttonset();
+            $('.sg-button').button();
+            window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height()); // set the init size
+            // Increase length of smaller content windows to reduce cutoffs in dropdowns. 
+            var iframeHeight = window.parent.$('.sg-legacy-iframe').height(); 
+            if (iframeHeight < 450)
+            { window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height() + 200); }
+           
+        })
+    </script>
+</body>
 </html>
