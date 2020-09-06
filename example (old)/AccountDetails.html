@@ -1,0 +1,241 @@
+
+
+<!DOCTYPE html>
+<html>
+<head><title>
+	HomeAccess
+</title>
+    
+    <link href="/HomeAccess/Stylesheets/Themes/custom-theme/jquery?v=khU3GP_ixo8tMiLwXJEqkRywEE1c7SBpfpbj4KSDyXA1" rel="Stylesheet" type="text/css" /> 
+
+    
+    <link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=CrossSite" />
+    <link rel="Stylesheet" href="../../eSchoolPLUSResource/GetEmbeddedStyle?file=ComboBox" />
+    <link rel="Stylesheet" href="../../Stylesheets/Common/font-awesome.css" />
+    
+    
+    <link rel="Stylesheet" href="../../Stylesheets/Site.css" />
+    <link rel="stylesheet" href="../../Stylesheets/Frame/Frame.css" /> 
+    <link rel="SHORTCUT ICON" href="../../Media/Themes/Base/Common/favicon.ico"/>
+    <style>
+        .sg-asp-table-header-row,
+        .ui-jqgrid-view .ui-jqgrid-hdiv, 
+        .ui-jqgrid tr.ui-jqgrid-labels th  {
+	        background-color: #00427c;
+            color: #FFFFFF;
+        }
+    </style>
+
+    <script src="/HomeAccess/Scripts/libs/jquery?v=kFkgd6hNofX_b_JGNSXAqVYLW6XzxJEd8j1YdcwKx3I1" type="text/javascript"></script>   
+    <script src="../../Scripts/libs/modernizr-2.8.3.js" type="text/javascript"></script>   
+    <script src="../../Scripts/Trirand/ui.multiselect.js" type="text/javascript" ></script>
+    <script src="../../Scripts/Trirand/i18n/grid.locale-en.js" type="text/javascript"></script>
+    <script src="../../Scripts/Trirand/jquery.jqGrid.js" type="text/javascript"></script>
+    <script src="../../Scripts/libs/json2.js" type="text/javascript"></script>
+    <script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=SungardCommon" type="text/javascript"></script>    
+    <script src="../../eSchoolPLUSResource/GetEmbeddedScript?file=Combobox" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            parseForComboBoxes();
+        });
+    </script>    
+    
+
+    <script type="text/javascript">
+        $(SunGard.Common.Init('/HomeAccess/'));
+    </script>
+    
+    
+    
+    <link href="../../Stylesheets/Account/MyProfile.css" type="text/css" rel="stylesheet">
+    <link href="../../Stylesheets/Frame/_Banner.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    
+    
+    <form id="frmLogon" method="post" action="../../Account/LogOn">
+        <input type="hidden" id="LogOnDetails_UserName" name="LogOnDetails.UserName" />
+        <input type="hidden" id="LogOnDetails_Password" name="LogOnDetails.Password" />
+        <input type="hidden" id="Database" name="Database" />
+    </form>
+
+    <div id='MainContent' class='sg-main-content'>
+        <div class='sg-hac-content'>
+            <form method="post" action="./MyProfile.aspx" id="fmMain">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['fmMain'];
+if (!theForm) {
+    theForm = document.fmMain;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="91A56EA9" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="u02a0q/VZKwnx/YVYuyx1456NbiCze87znCHx6/bCk4mR/enwqZdJnX2w2ylwMhxxgyP1+RNdFHAqXyiIiCp2B2mGItzueEQeoTq5drYb/sMZ9yCEv3QW6ErpIUUrA6G1onbM+Ofo8mj2Q6jr8SrLIbgpIFTlS8uyPnn0Jxq1z0RvV2B4H6dtxJpYPKqn4Hs72WBAuIIu0j7sDq3Km0LUX3nFt8DVjIPMzDwyv+Jwx2TIcD+CkO4wvJFwdrZPJM6B6ozIaXDsPOr+Mtyu6zfRjD/1DGIAElCRU18R0qL829gh0s5yoNUOpoWRhHA0NuxVPh8uCXwCgFxKq0sJIMooHwQD8xaFfZAFKRPFSTLvJ+R5lajwZR5+K0zQO+jEJsjRRffUX3EZAf9UnGbCoxcxv+PjC7008UCoHbMZdEGxzeyRRnXtG0a7KTgcz7fB6r3/e88VC+VkJ+wzYbQJQ+gN/BiZskN5m55i9pyFTfEEKSlXbBLyjOnzTxCfhzvRQ8nieMhvOFQLboJ0lzmPFP0ja0c7mlloNeVJ8GneH+C1GsmPZfdvaU/T4b+az7/apkYNTXiUv5/e9z5xJ3NjzvpF3Lk42y+rjuPIo7wb117fWaN3C0ADs6bKfY6oOsIZK9QRndCpryU/wQD8CEdxyiYm4nT99soJw0DXNn2O08rWS0=" />
+</div>
+                
+    <input name="ctl00$plnMain$hdnTitle" type="hidden" id="plnMain_hdnTitle" value="My Account" />
+
+
+    <div class="sg-header">
+        <span id="plnMain_lblTitle" class="sg-header-heading">My Account</span>
+    </div>
+    <div class="sg-content-grid">
+        <div class="sg-profile-header sg-content-grid-container sg-container-content">
+            <div>
+                <label id="plnMain_lblNamehdr">Name:</label>
+                <span id="plnMain_lblName">Srujan Mupparapu</span>
+            </div>
+            <div>
+                <label id="plnMain_lblAddresshdr">Address:</label>
+                <span id="plnMain_lblAddress">Kathryn Park, 2421 Lynbridge Dr</span>
+            </div>
+                
+            <div>
+                <label id="plnMain_lblCityStateZiphdr"></label>
+                <span id="plnMain_lblCityStateZip">Plano, TX 75025</span>
+            </div>                
+            <div>
+                <label id="plnMain_lblUserNamehdr">Logged in as:</label>
+                <span id="plnMain_lblUserName">Mupparapu.S</span>
+            </div>
+            <div>
+                <label id="plnMain_lblEmailAddresshdr">Email Address:</label>
+                <span id="plnMain_lblEmailAddress">Srujan.Mupparapu.216@k12.friscoisd.org</span>
+            </div>
+            <div>
+                <label id="plnMain_lblLastLoginhdr">Last Login:</label>
+                <span id="plnMain_lblLastLogin">6/16/2020 12:56:56 PM</span>
+            </div> 
+        </div>
+    
+        
+
+        <div id="plnMain_divChangePwdFields" class="sg-asp-table-group">	               	
+            <div class="sg-header-group">
+                <label id="plnMain_lblChangePwdhdr">Change Password</label>
+            </div>
+            <div class="sg-content-grid">
+                
+                
+                <div class="sg-profile-password sg-container-content">
+                                    
+                    <div id="plnMain_trOldPassword">
+                        <div><span id="plnMain_lblOldPwd">Old Password:</span><span class="RequiredField">*</span></div>
+                        <input name="ctl00$plnMain$txtOldPassword" type="password" id="plnMain_txtOldPassword" onchange="if(document.getElementById(&#39;plnMain_btnChange&#39;)) document.getElementById(&#39;plnMain_btnChange&#39;).disabled = false; if(document.getElementById(&#39;plnMain_lblPwdChangedMessage&#39;)) document.getElementById(&#39;plnMain_lblPwdChangedMessage&#39;).style.display = &#39;none&#39;;" />
+                    </div>                
+                    <div>
+                        <div><span id="plnMain_lblNewPwd">New Password:</span><span class="RequiredField">*</span></div>
+                        <input name="ctl00$plnMain$txtNewPassword" type="password" id="plnMain_txtNewPassword" onchange="if(document.getElementById(&#39;plnMain_btnChange&#39;)) document.getElementById(&#39;plnMain_btnChange&#39;).disabled = false; if(document.getElementById(&#39;plnMain_lblPwdChangedMessage&#39;)) document.getElementById(&#39;plnMain_lblPwdChangedMessage&#39;).style.display = &#39;none&#39;;" />
+                    </div>
+                    <div>
+                        <div><span id="plnMain_lblConfirmNewPwd">Confirm New Password:</span><span class="RequiredField">*</span></div>
+                        <input name="ctl00$plnMain$txtConfirmPassword" type="password" id="plnMain_txtConfirmPassword" onchange="if(document.getElementById(&#39;plnMain_btnChange&#39;)) document.getElementById(&#39;plnMain_btnChange&#39;).disabled = false; if(document.getElementById(&#39;plnMain_lblPwdChangedMessage&#39;)) document.getElementById(&#39;plnMain_lblPwdChangedMessage&#39;).style.display = &#39;none&#39;;" />
+                    </div>
+                </div>
+                <div id="plnMain_profButtonContainer" class="sg-container-content">
+                    <button onclick="if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate(''); __doPostBack('ctl00$plnMain$btnChange','')" id="plnMain_btnChange" type="button" class="sg-button" title="Change your current password">Change Password</button>
+                </div>
+            </div>
+        </div>
+        <div id="plnMain_cqDiv" class="sg-asp-table-group">
+            <div class="sg-header-group">
+                <label id="plnMain_lblChallengeQuestions">Challenge Questions</label>
+            </div>
+            <div class="sg-content-grid">
+                
+
+    <div class="sg-container-content sg-content-grid-container sg-labeled-info">
+        <span id="plnMain_hacChallengeQuestions_ChallengeCaption">Compose 2 challenge questions and provide appropriate answers</span><!-- TODO: Translate -->
+    </div>
+    
+
+    <div>
+	<table class="sg-asp-table sg-profile-questions" cellspacing="0" rules="all" border="1" id="plnMain_hacChallengeQuestions_gdvChallengeQues" style="border-collapse:collapse;">
+		<tr class="sg-asp-table-header-row">
+			<th scope="col">Questions</th><th scope="col">Answers</th>
+		</tr><tr>
+			<td>
+                    <!-- Rows="2" Columns="80" MaxLength="750" -->
+                    <textarea name="ctl00$plnMain$hacChallengeQuestions$gdvChallengeQues$ctl02$txtQuestion" rows="2" cols="80" id="plnMain_hacChallengeQuestions_gdvChallengeQues_txtQuestion_0" onchange="if(document.getElementById(&#39;plnMain_hacChallengeQuestions_btnUpdateCQ&#39;)) document.getElementById(&#39;plnMain_hacChallengeQuestions_btnUpdateCQ&#39;).disabled = false; if(document.getElementById(&#39;plnMain_hacChallengeQuestions_lblCQChangedMessage&#39;)) document.getElementById(&#39;plnMain_hacChallengeQuestions_lblCQChangedMessage&#39;).style.display = &#39;none&#39;;  if(document.getElementById(&#39;plnMain_hacChallengeQuestions_gdvChallengeQues_lblAnswerExists_0&#39;)) document.getElementById(&#39;plnMain_hacChallengeQuestions_gdvChallengeQues_lblAnswerExists_0&#39;).remove();" maxlength="750">
+Birthday in numbers?</textarea>
+                </td><td>
+                    <!-- Columns="40" MaxLength="750" -->
+                    <input name="ctl00$plnMain$hacChallengeQuestions$gdvChallengeQues$ctl02$txtAnswer" type="password" maxlength="750" size="40" id="plnMain_hacChallengeQuestions_gdvChallengeQues_txtAnswer_0" onchange="if(document.getElementById(&#39;plnMain_hacChallengeQuestions_btnUpdateCQ&#39;)) document.getElementById(&#39;plnMain_hacChallengeQuestions_btnUpdateCQ&#39;).disabled = false; if(document.getElementById(&#39;plnMain_hacChallengeQuestions_lblCQChangedMessage&#39;)) document.getElementById(&#39;plnMain_hacChallengeQuestions_lblCQChangedMessage&#39;).style.display = &#39;none&#39;;  if(document.getElementById(&#39;plnMain_hacChallengeQuestions_gdvChallengeQues_lblAnswerExists_0&#39;)) document.getElementById(&#39;plnMain_hacChallengeQuestions_gdvChallengeQues_lblAnswerExists_0&#39;).remove();" /> 
+                    <span id="plnMain_hacChallengeQuestions_gdvChallengeQues_lblAnswerExists_0" class="sg-profile-error">An answer has been defined for this question. To change it, enter a new answer.</span>                               
+                </td>
+		</tr><tr class="sg-asp-table-data-row">
+			<td>
+                    <!-- Rows="2" Columns="80" MaxLength="750" -->
+                    <textarea name="ctl00$plnMain$hacChallengeQuestions$gdvChallengeQues$ctl03$txtQuestion" rows="2" cols="80" id="plnMain_hacChallengeQuestions_gdvChallengeQues_txtQuestion_1" onchange="if(document.getElementById(&#39;plnMain_hacChallengeQuestions_btnUpdateCQ&#39;)) document.getElementById(&#39;plnMain_hacChallengeQuestions_btnUpdateCQ&#39;).disabled = false; if(document.getElementById(&#39;plnMain_hacChallengeQuestions_lblCQChangedMessage&#39;)) document.getElementById(&#39;plnMain_hacChallengeQuestions_lblCQChangedMessage&#39;).style.display = &#39;none&#39;;  if(document.getElementById(&#39;plnMain_hacChallengeQuestions_gdvChallengeQues_lblAnswerExists_1&#39;)) document.getElementById(&#39;plnMain_hacChallengeQuestions_gdvChallengeQues_lblAnswerExists_1&#39;).remove();" maxlength="750">
+Student ID from Austin?</textarea>
+                </td><td>
+                    <!-- Columns="40" MaxLength="750" -->
+                    <input name="ctl00$plnMain$hacChallengeQuestions$gdvChallengeQues$ctl03$txtAnswer" type="password" maxlength="750" size="40" id="plnMain_hacChallengeQuestions_gdvChallengeQues_txtAnswer_1" onchange="if(document.getElementById(&#39;plnMain_hacChallengeQuestions_btnUpdateCQ&#39;)) document.getElementById(&#39;plnMain_hacChallengeQuestions_btnUpdateCQ&#39;).disabled = false; if(document.getElementById(&#39;plnMain_hacChallengeQuestions_lblCQChangedMessage&#39;)) document.getElementById(&#39;plnMain_hacChallengeQuestions_lblCQChangedMessage&#39;).style.display = &#39;none&#39;;  if(document.getElementById(&#39;plnMain_hacChallengeQuestions_gdvChallengeQues_lblAnswerExists_1&#39;)) document.getElementById(&#39;plnMain_hacChallengeQuestions_gdvChallengeQues_lblAnswerExists_1&#39;).remove();" /> 
+                    <span id="plnMain_hacChallengeQuestions_gdvChallengeQues_lblAnswerExists_1" class="sg-profile-error">An answer has been defined for this question. To change it, enter a new answer.</span>                               
+                </td>
+		</tr>
+	</table>
+</div>
+    <div class="sg-container-content">
+        <button onclick="if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate(''); __doPostBack('ctl00$plnMain$hacChallengeQuestions$btnUpdateCQ','')" id="plnMain_hacChallengeQuestions_btnUpdateCQ" class="sg-button">Update challenge questions</button>
+    </div>
+
+    <input name="ctl00$plnMain$hacChallengeQuestions$hdnGdvCaption" type="hidden" id="plnMain_hacChallengeQuestions_hdnGdvCaption" value="Compose {0} challenge questions and provide appropriate answers" />
+    <input name="ctl00$plnMain$hacChallengeQuestions$hdnProvideQAMsg" type="hidden" id="plnMain_hacChallengeQuestions_hdnProvideQAMsg" value="Please provide questions and answers for all challenge questions." />
+    <input name="ctl00$plnMain$hacChallengeQuestions$hdnSameQAErrorMsg" type="hidden" id="plnMain_hacChallengeQuestions_hdnSameQAErrorMsg" value="The same challenge question and answer cannot be used more than once." />
+            </div>
+        </div>
+        
+        
+    </div>
+    <input name="ctl00$plnMain$lblChangeToolTip" type="hidden" id="plnMain_lblChangeToolTip" value="Change your current password" />
+    <input name="ctl00$plnMain$lblCloseToolTip" type="hidden" id="plnMain_lblCloseToolTip" />
+    <input name="ctl00$plnMain$hdnOldCurrPwdMatchMsg" type="hidden" id="plnMain_hdnOldCurrPwdMatchMsg" value="The Old password entered does not match your current password." />
+    <input name="ctl00$plnMain$hdnAllPwdReqMsg" type="hidden" id="plnMain_hdnAllPwdReqMsg" value="The Old, New and Confirm password fields are required when changing your password." />
+    <input name="ctl00$plnMain$hdnNewConfirmReqMsg" type="hidden" id="plnMain_hdnNewConfirmReqMsg" value="The New and Confirm password fields are required when changing your password." />
+    <input name="ctl00$plnMain$hdnNewConfirmMatchMsg" type="hidden" id="plnMain_hdnNewConfirmMatchMsg" value="The New and Confirm password entries must match." />
+    <input name="ctl00$plnMain$hdnOldNewPwdMatchMsg" type="hidden" id="plnMain_hdnOldNewPwdMatchMsg" value="The new password cannot match the old password." />
+    <input name="ctl00$plnMain$hdnPwdLengthMsg" type="hidden" id="plnMain_hdnPwdLengthMsg" value="The new password must be between {0} and {1} characters in length." />
+    <input name="ctl00$plnMain$hdnPwdMinLengthMsg" type="hidden" id="plnMain_hdnPwdMinLengthMsg" value="The new password must be at least {0} character(s) in length." />
+    <input name="ctl00$plnMain$hdnPwdMaxLengthMsg" type="hidden" id="plnMain_hdnPwdMaxLengthMsg" value="The new password must be no greater than {0} characters in length." />
+    <input name="ctl00$plnMain$hdnPwdCharMsg" type="hidden" id="plnMain_hdnPwdCharMsg" value="The password must contain 3 of the following 4 character types (Uppercase, Lowercase, Numbers, Symbols)." />    
+    <input name="ctl00$plnMain$hdnContinueToolTip" type="hidden" id="plnMain_hdnContinueToolTip" value="Continue to the Home Access Center main page" />    
+    <input name="ctl00$plnMain$hdnCompleteRegistration" type="hidden" id="plnMain_hdnCompleteRegistration" value="Complete Registration" />
+    <input name="ctl00$plnMain$hdnContinueToHomeAccessCenter" type="hidden" id="plnMain_hdnContinueToHomeAccessCenter" value="Continue to Home Access Center" />
+
+            </form>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            // Build the jQuery UI buttons
+            $('.sg-buttonset').buttonset();
+            $('.sg-button').button();
+            window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height()); // set the init size
+            // Increase length of smaller content windows to reduce cutoffs in dropdowns. 
+            var iframeHeight = window.parent.$('.sg-legacy-iframe').height(); 
+            if (iframeHeight < 450)
+            { window.parent.$('.sg-legacy-iframe').height($('.sg-main-content').height() + 200); }
+           
+        })
+    </script>
+</body>
+</html>
