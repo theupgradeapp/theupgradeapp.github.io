@@ -22,21 +22,21 @@
 					"notify": true
 				},
 				{
-					"name": "Lunch",
+					"name": "Advisory",
 					"startHour": 12,
 					"startMinute": 15,
 					"endHour": 12,
 					"endMinute": 45,
-					"abbreviation": "Lun",
+					"abbreviation": "Adv",
 					"notify": true
 				},
 				{
-					"name": "Advisory",
+					"name": "Lunch",
 					"startHour": 12,
 					"startMinute": 45,
 					"endHour": 13,
 					"endMinute": 15,
-					"abbreviation": "Adv",
+					"abbreviation": "Lun",
 					"notify": true
 				},
 				{
